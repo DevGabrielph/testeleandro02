@@ -57,10 +57,10 @@ main{
 
 .listap{
     background-color: #463d3d7a;
-    max-width: 500px;
+    max-width: 420px;
     min-width: 350px;
     border-radius: 20px;
-    height:80vh ;
+    height:70vh ;
     display: grid;
     text-align: center;
     align-items: center;
@@ -74,13 +74,17 @@ li{
     text-decoration: none;
     
 }
+#icardapio{
+    max-width: 300px;
+}
 .cardapio{
+    
     font-size: 1.8em;
     font-weight: bold;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 20px;
-    margin-left:60px ;
-    margin-right:60px ;
+    margin-left:40px ;
+    margin-right:40px ;
     text-decoration: none;
     border: 1px solid rgb(230, 224, 224);
     background-image: linear-gradient(to top ,#BF343F,#F2CE1B);
