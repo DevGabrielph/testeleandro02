@@ -1,5 +1,4 @@
-//..........--VARIAVEIS--..........
-
+//..........--VARIAVEIS--........../*
 var listapricipal =document.querySelector('.listap')
 
 var listaitens = document.querySelector('#lista-itens')
@@ -19,6 +18,8 @@ var bebi = document.querySelector('#bebidas')
 var sucos = document.querySelector('#sucos')
 
 var vita = document.querySelector('#vitaminas')
+
+var titulo =document.querySelector('#titulo-cabeçalho-itens')
 
 
 //..........--EVENTOS--............
@@ -48,10 +49,14 @@ function promoçoes() {
  
     listapricipal.style.display="none"
 
-    listaitens.style.display="grid"
+    listaitens.style.display="block"
+    
+    titulo.innerHTML='Promoções'
 
     
 }
+
+
 
 //...........--botão proções--................
 
@@ -59,7 +64,11 @@ function porçoes(){
 
     listapricipal.style.display="none"
 
-    listaitens.style.display="grid"
+    listaitens.style.display="block"
+
+    titulo.innerHTML='Porções'
+
+
 
 }
 
@@ -69,7 +78,9 @@ function hamb(){
 
     listapricipal.style.display="none"
 
-    listaitens.style.display="grid"
+    listaitens.style.display="block"
+
+    titulo.innerHTML='Hambúrgueres'
 
 }
 //...........--botão Cachorro-quente--................
@@ -78,7 +89,10 @@ function cachorroquente(){
 
     listapricipal.style.display="none"
 
-    listaitens.style.display="grid"
+    listaitens.style.display="block"
+    
+    titulo.innerHTML='Cachorro Quente'
+    
 
 }
 //...........--botão bebidas--................
@@ -87,7 +101,9 @@ function bebidas(){
 
     listapricipal.style.display="none"
 
-    listaitens.style.display="grid"
+    listaitens.style.display="block"
+
+    titulo.innerHTML='Bebidas'
 
 }
 //...........--botão sucos naturais--................
@@ -96,7 +112,9 @@ function sucosnaturais(){
 
     listapricipal.style.display="none"
 
-    listaitens.style.display="grid"
+    listaitens.style.display="block"
+
+    titulo.innerHTML='Sucos Naturais'
 
 }
 //...........--botão vitaminas--................
@@ -105,8 +123,9 @@ function vitaminas(){
 
     listapricipal.style.display="none"
 
-    listaitens.style.display="grid"
+    listaitens.style.display="block"
 
+    titulo.innerHTML='Vitaminas'
 }
 
 

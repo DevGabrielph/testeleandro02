@@ -61,11 +61,12 @@ main{
     min-width: 350px;
     border-radius: 20px;
     height:70vh ;
-    display: grid;
+    display: none;
     text-align: center;
     align-items: center;
     margin: auto;
     margin-top: 100px;
+    box-shadow: 2px 3px 16px rgb(236, 220, 220);
     
     
 }
@@ -102,14 +103,27 @@ li{
 
 #lista-itens{
     background-color: #463d3d7a;
-    max-width: 500px;
+    max-width: 420px;
     min-width: 350px;
     border-radius: 20px;
-    height:80vh ;
-    display: none;
+    height:70vh ;
+    display: block;
     text-align: center;
     margin: auto;
     margin-top: 100px;
+    box-shadow: 2px 3px 16px rgb(236, 220, 220);
+    overflow: auto;
+}
+
+#cabeçalhoitens{
+    background-image:linear-gradient(to left, rgba(255, 254, 254, 0.699) ,rgba(206, 202, 202, 0.459)) ;
+    display: flex;
+    
+    height: 60px;
+    align-items: center;
+    border-radius: 20px 20px 0px 0px;
+    
+    
 }
 #voltar{
     margin: 20px;  
@@ -118,5 +132,29 @@ li{
     font-size: 1.8em;
     padding: 5px;
     border-radius: 50%;
-    box-shadow: 2px 2px 8px  rgba(255, 255, 255, 0.726);
+    box-shadow: 2px 2px 8px  rgba(231, 225, 225, 0.726);
+    display: flex;
+    position: fixed;
+    
+}
+#titulo-cabeçalho-itens{
+    margin: auto;
+    
+    
+    
+    
+    
+}
+.item1{
+    background-color: rgb(49, 49, 49);
+    position: relative;
+    
+}
+.titulo-item{
+    
+    background-color: #975056;
+   
+}
+.valores{
+    display: flex;
 }
