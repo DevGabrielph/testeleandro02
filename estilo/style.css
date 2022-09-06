@@ -139,14 +139,16 @@ li{
     padding: 5px;
     border-radius: 50%;
     box-shadow: 2px 2px 8px  rgba(231, 225, 225, 0.726);
-    
+    position: fixed;
     
     
 }
 #titulo-cabeçalho-itens{
     
   margin: auto;
-    justify-content: space-between;
+  
+  position: relative;
+    
        
     
 }
@@ -154,6 +156,7 @@ li{
     background-color: white;
     display: inline-flex;
     margin: 5px;
+    width: 320px;
 }
 .img-item1,.img-item2,.img-item3,.img-item4,.img-item5,.img-item6,.img-item7,.img-item8,.img-item9,.img-item10{
     max-width: 100px;
