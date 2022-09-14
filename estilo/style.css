@@ -24,16 +24,20 @@ header{
 
 }
 #cabecalho{
-    width: 90vw;
-    margin: auto;
+    width: 95vw;
     display: flex;
-    margin-right: 20px;
+    
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    background-color: black;
     
 }
+#carrinho-ext{
+    display: inline-flex;
+}
 
-#carrinhoext>ion-icon{
+#carrinho-ext>ion-icon{
     margin: 10px;
     
     background-image: linear-gradient(to top ,#BF343F,#F2CE1B);
@@ -42,12 +46,57 @@ header{
     padding: 2px;
     border-radius: 50%;
     box-shadow: 2px 2px 8px  rgba(255, 255, 255, 0.726);
+    position: relative;
+    display: inline-flex;
+
+
 }   
 
 #carrinhoext>ion-icon:hover{
    box-shadow: 2px 4px 16px white;
    background-image: linear-gradient(to top ,#975056,#e4d485);
+   
 
+}
+#numero-de-itens{
+    color: white;
+    background-color: #BF343F;
+    position: absolute;
+    border-radius: 50%;
+    margin-top:35px;
+    padding: 3px;
+}
+
+
+#interior-carrinho{
+    color: white;
+    width: 370px;
+    height: 70vh;
+    background-color: #463d3dd2;
+    box-shadow: 2px 3px 16px rgb(253, 243, 243);
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 35px;
+    display: none;
+
+    
+}
+
+#cabeçalho-carrinho{
+    background-image:linear-gradient(to left, rgb(255, 254, 254) ,rgb(206, 202, 202)) ;
+    height: 70px;
+    position:fixed;
+    display:inline-flex;
+    margin: auto;
+    border-radius: 20px 20px 0px 0px;
+    width: 370px;
+}
+
+#titulo-carrinho{
+    
+    margin: auto;
+    color: black;
+    
 }
 main{
     width: 100vw;
@@ -58,7 +107,7 @@ main{
 .listap{
     background-color: #463d3d7a;
    
-    width: 350px;
+    width: 370px;
     border-radius: 20px;
     height:70vh ;
     display: grid;
@@ -102,10 +151,10 @@ li{
 }
 #lista-folha-itens{
     background-color: #463d3d7a;
-    
-    width: 350px;
+    display: none;
+    width: 370px;
     border-radius: 20px;
-    height:70vh ;
+    height:83vh ;
     overflow-y: scroll;
     box-shadow: 2px 3px 16px rgb(236, 220, 220);
     margin: auto;
@@ -124,14 +173,14 @@ li{
 #cabeçalhoitens{
     background-image:linear-gradient(to left, rgb(255, 254, 254) ,rgb(206, 202, 202)) ;
     height: 70px;
-    display: inline-flex;
-    position: fixed;
+    position:fixed;
+    display:inline-flex;
     margin: auto;
     border-radius: 20px 20px 0px 0px;
-    width: 350px;
+    width: 370px;
     
 }
-#voltar{
+#voltar,#voltar-carrinho{
     margin: 20px;  
     background-color: white;
     color: black;
@@ -147,7 +196,7 @@ li{
     
   margin: auto;
   
-  position: relative;
+  
     
        
     
