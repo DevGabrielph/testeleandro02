@@ -7,10 +7,22 @@ var voltar =document.querySelector('#voltar')
 
 var carrinho=document.querySelector('#carrinho-ext')
 
+var listaInicial= {
+    promo : document.querySelector('#promoçoes'),
+    porç : document.querySelector('#porçoes'),
+    ham : document.querySelector('#hamb'),
+    cachorroquen : document.querySelector('#cachorro'),
+    bebi : document.querySelector('#bebidas'),
+    sucos : document.querySelector('#sucos'),
+    vita : document.querySelector('#vitaminas')
+
+
+}
+
 var promo = document.querySelector('#promoçoes')
 
 var porç = document.querySelector('#porçoes')
-
+ 
 var ham = document.querySelector('#hamb')
 
 var cachorroquen= document.querySelector('#cachorro')
@@ -21,9 +33,27 @@ var sucos = document.querySelector('#sucos')
 
 var vita = document.querySelector('#vitaminas')
 
+
+
+
 var titulo =document.querySelector('#titulo-cabeçalho-itens')
 
 //----------VARIAVEIS--ITENS-------------//
+var item ={
+    item1:document.querySelector('.item1'),
+    item2 : document.querySelector('.item2'),
+    item3 : document.querySelector('.item3'),
+    item4 : document.querySelector('.item4'),
+    item5 : document.querySelector('.item5'),
+    item6 : document.querySelector('.item6'),
+    item7 : document.querySelector('.item7'),
+    item8 : document.querySelector('.item8'),
+    item9 : document.querySelector('.item9'),
+    item10 : document.querySelector('.item10')
+
+
+}
+
 var item1 = document.querySelector('.item1')
 var item2 = document.querySelector('.item2')
 var item3 = document.querySelector('.item3')
@@ -89,6 +119,7 @@ function promoçoes() {
         { nome:'',descriçao:'',valor:'',imagem:''}
 
     ]
+    console.log(promo)
 //..............--item-1--...............
     var tituloitem1= document.querySelector('.titulo-item1')
 
