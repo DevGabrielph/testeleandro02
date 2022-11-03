@@ -1,3 +1,101 @@
+//-----VARIAVEIS-PRINCIPAIS
+let folhas={
+    
+    folha1:document.querySelector('.listap'),
+    folha2:document.querySelector('#lista-folha-itens')
+    
+
+}
+
+//----VARIAVEIS-DA-FOLHA-1
+let listaInicial={
+    promo:document.querySelector('#promoçoes'),
+    porç:document.querySelector('#porçoes'),
+    hamb:document.querySelector('#hamb'),
+    cachorroquen:document.querySelector('#cachorro'),
+    bebi:document.querySelector('#bebidas'),
+    sucos:document.querySelector('#sucos'),
+    vita:document.querySelector('#vitaminas')
+
+
+}
+//--------EVENTOS-LISTA-INICIAL---
+listaInicial.promo.addEventListener('click',promoçoes)
+
+listaInicial.porç.addEventListener('click', porçoes)
+
+listaInicial.hamb.addEventListener('click',hamb )
+
+listaInicial.cachorroquen.addEventListener('click',cachorroquente)
+
+listaInicial.bebi.addEventListener('click',bebidas)
+
+listaInicial.sucos.addEventListener('click',sucosnaturais)
+
+listaInicial.vita.addEventListener('click',vitaminas)
+
+//-------------botão-VOLTAR
+let volta =document.querySelector('#voltar')
+volta.addEventListener('click',voltar)
+function voltar(){
+    
+    folhas.folha1.style.display='grid'
+    folhas.folha2.style.display='none'
+}
+
+
+//-------FUNÇOES
+
+function promoçoes(){
+    folhas.folha1.style.display='none'
+    folhas.folha2.style.display='block'
+
+    
+}
+function porçoes(){
+   folhas.folha1.style.display='none'
+   folhas.folha2.style.display='block'
+
+}
+
+function hamb(){
+   folhas.folha1.style.display='none'
+   folhas.folha2.style.display='block'
+
+}
+
+function cachorroquente(){
+    folhas.folha1.style.display='none'
+    folhas.folha2.style.display='block'
+
+}
+
+function bebidas(){
+    folhas.folha1.style.display='none'
+    folhas.folha2.style.display='block'
+
+}
+
+function sucosnaturais(){
+    folhas.folha1.style.display='none'
+    folhas.folha2.style.display='block'
+
+}
+function vitaminas(){
+    folhas.folha1.style.display='none'
+    folhas.folha2.style.display='block'
+
+}
+
+
+
+
+
+
+
+
+
+/*
 //..........--VARIAVEIS--........../*
 var listapricipal =document.querySelector('.listap')
 
@@ -19,22 +117,6 @@ var listaInicial= {
 
 }
 
-var promo = document.querySelector('#promoçoes')
-
-var porç = document.querySelector('#porçoes')
- 
-var ham = document.querySelector('#hamb')
-
-var cachorroquen= document.querySelector('#cachorro')
-
-var bebi = document.querySelector('#bebidas')
-
-var sucos = document.querySelector('#sucos')
-
-var vita = document.querySelector('#vitaminas')
-
-
-
 
 var titulo =document.querySelector('#titulo-cabeçalho-itens')
 
@@ -53,17 +135,6 @@ var item ={
 
 
 }
-
-var item1 = document.querySelector('.item1')
-var item2 = document.querySelector('.item2')
-var item3 = document.querySelector('.item3')
-var item4 = document.querySelector('.item4')
-var item5 = document.querySelector('.item5')
-var item6 = document.querySelector('.item6')
-var item7 = document.querySelector('.item7')
-var item8 = document.querySelector('.item8')
-var item9 = document.querySelector('.item9')
-var item10 = document.querySelector('.item10')
 
 
 //..........--EVENTOS--............
@@ -88,8 +159,12 @@ vita.addEventListener('click',vitaminas)
 
 //.........--FUNÇÕES--.............
 
-//.........-- botão entrar nas promoçoes--........
+function promoçoes(){
+    alert('oi')
+}
 
+//.........-- botão entrar nas promoçoes--........
+/*
 function promoçoes() {
  
     listapricipal.style.display="none"
@@ -1502,7 +1577,7 @@ function voltecarrinho(){
 
     
 
-    
+    */
     
     
 
