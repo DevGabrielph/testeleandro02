@@ -8,6 +8,7 @@ var voltar =document.querySelector('#voltar')
 var carrinho=document.querySelector('#carrinho-ext')
 
 var listaInicial= {
+
     promo : document.querySelector('#promoçoes'),
     porç : document.querySelector('#porçoes'),
     ham : document.querySelector('#hamb'),
@@ -15,7 +16,6 @@ var listaInicial= {
     bebi : document.querySelector('#bebidas'),
     sucos : document.querySelector('#sucos'),
     vita : document.querySelector('#vitaminas')
-
 
 }
 

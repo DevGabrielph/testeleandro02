@@ -76,45 +76,44 @@ main{
 }
 
 .listap{
-    background-color: #463d3d7a;
-   
-    width: 370px;
+    background-color: #463d3d7a;   
+    max-width: 370px;
     border-radius: 20px;
-    height:70vh ;
-    display: grid;
-    text-align: center;
-    align-items: center;
+    height:80vh ;
     margin: auto;
     margin-top: 100px;
-    box-shadow: 2px 3px 16px rgb(236, 220, 220);
-    
-    
-}
-li{
-    display: inline;
-    text-decoration: none;
-    
-}
-#icardapio{
-    max-width: 300px;
-}
-.cardapio{
-    
-    font-size: 1.8em;
-    font-weight: bold;
-    margin-top: 30px;
     margin-bottom: 20px;
-    margin-left:40px ;
-    margin-right:40px ;
-    text-decoration: none;
+    padding: 10px;
+    box-shadow: 2px 3px 16px rgb(236, 220, 220);
+    align-items: center;
+    display: grid;
+    
+}
+
+li{
+    
     border: 1px solid rgb(230, 224, 224);
     background-image: linear-gradient(to top ,#BF343F,#F2CE1B);
     color: rgb(255, 255, 255);
     border-radius: 30px;
     box-shadow: 2px 2px 7px white;
-
+    list-style: none;
+    display: inline-flex;
+    width: 300px;
+    padding: 2px;
+    font-size: 1.8em;
+    margin: auto;
+    
+   
 }
-.cardapio:hover{
+li>div{
+    background-color: #975056;
+    margin: auto;
+    text-align: center;
+    
+}
+
+li:hover{
     background-image: linear-gradient(to top ,#bf3440c4,#f2ce1bbe);
     box-shadow: 2px 2px 16px white;
 
