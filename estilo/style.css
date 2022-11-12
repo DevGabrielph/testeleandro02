@@ -1,3 +1,4 @@
+
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2? família=DynaPuff:wght@500&display=swap');
 
@@ -175,20 +176,20 @@ li:hover{
        
     
 }
-.item1,.item2,.item3,.item4,.item5,.item6,.item7,.item8,.item9,.item10{
+.item{
     background-color: white;
     display: inline-flex;
     margin: 5px;
     width: 320px;
 }
-.img-item1,.img-item2,.img-item3,.img-item4,.img-item5,.img-item6,.img-item7,.img-item8,.img-item9,.img-item10{
+.img-item{
     max-width: 100px;
     align-items: center;
 }
-.descri-item1,.descri-item2,.descri-item3,.descri-item4,.descri-item5,.descri-item6,.descri-item7,.descri-item8,.descri-item9,.descri-item10{
+.descri-item{
     margin: auto;
 }
-.descriçao-item1,.descriçao-item2,.descriçao-item3,.descriçao-item4,.descriçao-item5,.descriçao-item6,.descriçao-item7,.descriçao-item8,.descriçao-item9,.descriçao-item10{
+.descriçao-produto{
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     max-height:40px ;
@@ -196,16 +197,16 @@ li:hover{
     display: inline-block;
 
 }
-.descriçao-item1:hover,.descriçao-item2:hover,.descriçao-item3:hover,.descriçao-item4:hover,.descriçao-item5:hover,.descriçao-item6:hover,.descriçao-item7:hover,.descriçao-item8:hover,.descriçao-item9:hover,.descriçao-item10:hover{
+.descriçao-produto:hover{
     transition: 1s;
     max-height: 70px;
 }
-.titulo-item1,.titulo-item2,.titulo-item3,.titulo-item4,.titulo-item5,.titulo-item6,.titulo-item7,.titulo-item8,.titulo-item9,.titulo-item10{
+.titulo-item{
     font-size: 1.5em;
     
     
 }
-.valor-item1,.valor-item2,.valor-item3,.valor-item4,.valor-item5,.valor-item6,.valor-item7,.valor-item8,.valor-item9,.valor-item10{
+.valor-item{
     font-size: larger;
     font-weight: bold;
 }
@@ -274,4 +275,10 @@ li:hover{
     text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.534);
     
     
+}
+
+.teste{
+    width: 50px;
+    height: 50px;
+    background-color: #BF343F;
 }
