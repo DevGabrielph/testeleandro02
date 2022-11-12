@@ -38,14 +38,7 @@ listaInicial.sucos.addEventListener('click',sucosnaturais)
 
 listaInicial.vita.addEventListener('click',vitaminas)
 
-//-------------botão-VOLTAR
-let volta =document.querySelector('#voltar')
-volta.addEventListener('click',voltar)
-function voltar(){
-    
-    folhas.folha1.style.display='grid'
-    folhas.folha2.style.display='none'
-}
+
 ///-------------ITENS-EMPLIHADOS(arrays)
 let promo=[
     { nome:'2 X-tudos',descriçao:' Pão, carne, queijo, presunto, bacon, ovo, alface, ketchup, maionese temperada, e batata palha.',valor:19.99,imagem:"imagens/x-tudo.png"},
@@ -142,18 +135,25 @@ let titulos=['Promoções','Porções','Hambúrgueres','Cachorro Quente','Bebida
 /// arrays com todos os itens 
 
         let itens=[]
+        console.log(itens)
 
 //-------FUNÇOES
 
-function promoçoes(){
-    folhas.folha1.style.display='none'
-    folhas.folha2.style.display='block'
-    tituloFolha2.innerHTML=titulos[0]
-    itens.push(promo)
 
-    itens[0].map((pro)=>{
+
     
-console.log(itens)
+
+//-------------botão-VOLTAR
+let volta =document.querySelector('#voltar')
+volta.addEventListener('click',voltar)
+function voltar(){
+    itens.splice(0,1)
+    folhas.folha1.style.display='grid'
+    folhas.folha2.style.display='none'
+    itens=[]
+    itens.map((todo)=>{
+    
+
 
         let divElement=document.createElement('div')//criando caixa de cada item
         divElement.classList.add('item')//inserindo a classe dos itens 
@@ -161,7 +161,7 @@ console.log(itens)
 
 
         let imagemItem=document.createElement('img')//criando 'img'
-        imagemItem.src=pro.imagem//dando caminho a imagem 
+        imagemItem.src=todo.imagem//dando caminho a imagem 
         imagemItem.classList.add('img-item')//inserindo classe
         divElement.appendChild(imagemItem) //inserindo imagem dentro da caixa do item
 
@@ -174,14 +174,14 @@ console.log(itens)
         let h1Element=document.createElement('h1')//criando titulo do item
         h1Element.classList.add('titulo-item')//adicionando a classe do titulo
         descriItem.appendChild(h1Element)//inserindo 'h1' dentro da descrição
-        let textoTitluloItem=document.createTextNode(pro.nome)//criando texto do titulo
+        let textoTitluloItem=document.createTextNode(todo.nome)//criando texto do titulo
         h1Element.appendChild(textoTitluloItem)//inserindo texto dentro do item 
 
 
         let descriçaoProduto=document.createElement('div')//criando caixa de descrição do produto
         descriçaoProduto.classList.add('descrição-produto')//inserindo classe
         descriItem.appendChild(descriçaoProduto)//inserindo descrição do produto dentro da descrição do item 
-        let textoDescriçao=document.createTextNode(pro.descriçao)//criando texto descrição
+        let textoDescriçao=document.createTextNode(todo.descriçao)//criando texto descrição
         descriçaoProduto.appendChild(textoDescriçao)//inserindo texto
 
         let caixaValor=document.createElement('div')//criando caixa valor
@@ -191,23 +191,67 @@ console.log(itens)
         let valorItem=document.createElement('div')
         valorItem.classList.add('valor-item')
         caixaValor.appendChild(valorItem)
-        let preço=pro.valor
+        let preço=todo.valor
         let valor=String(preço)
         let textoValor=document.createTextNode(`R$ ${valor.replace(".",",")}`)
         valorItem.appendChild(textoValor)
 
-        console.log(preço)
-        console.log(valor)
+    })
+    console.log(itens)
+}
+
+function promoçoes(){
+    folhas.folha1.style.display='none'
+    folhas.folha2.style.display='block'
+    tituloFolha2.innerHTML=titulos[0]
+    itens.push(promo)
+    itens[0].map((todo)=>{
     
+
+
+        let divElement=document.createElement('div')//criando caixa de cada item
+        divElement.classList.add('item')//inserindo a classe dos itens 
+        listaItemns.appendChild(divElement)//inserindo caixa do item dentro da lista de itens
+
+
+        let imagemItem=document.createElement('img')//criando 'img'
+        imagemItem.src=todo.imagem//dando caminho a imagem 
+        imagemItem.classList.add('img-item')//inserindo classe
+        divElement.appendChild(imagemItem) //inserindo imagem dentro da caixa do item
+
         
+        let descriItem=document.createElement('div')//criando div de descrição
+        descriItem.classList.add('descri-item')//inserindo a classe 
+        divElement.appendChild(descriItem)//inserindo caixa de descrição dentro da caixa do item 
+
+        
+        let h1Element=document.createElement('h1')//criando titulo do item
+        h1Element.classList.add('titulo-item')//adicionando a classe do titulo
+        descriItem.appendChild(h1Element)//inserindo 'h1' dentro da descrição
+        let textoTitluloItem=document.createTextNode(todo.nome)//criando texto do titulo
+        h1Element.appendChild(textoTitluloItem)//inserindo texto dentro do item 
+
+
+        let descriçaoProduto=document.createElement('div')//criando caixa de descrição do produto
+        descriçaoProduto.classList.add('descrição-produto')//inserindo classe
+        descriItem.appendChild(descriçaoProduto)//inserindo descrição do produto dentro da descrição do item 
+        let textoDescriçao=document.createTextNode(todo.descriçao)//criando texto descrição
+        descriçaoProduto.appendChild(textoDescriçao)//inserindo texto
+
+        let caixaValor=document.createElement('div')//criando caixa valor
+        caixaValor.classList.add('valor')//inserindo classe
+        descriItem.appendChild(caixaValor)//inserindo caixa valor dentro da descrição do item 
+
+        let valorItem=document.createElement('div')
+        valorItem.classList.add('valor-item')
+        caixaValor.appendChild(valorItem)
+        let preço=todo.valor
+        let valor=String(preço)
+        let textoValor=document.createTextNode(`R$ ${valor.replace(".",",")}`)
+        valorItem.appendChild(textoValor)
 
     })
-    
-   
-
-
-
-    
+    console.log(itens)
 
 
 }
@@ -217,32 +261,6 @@ function porçoes(){
    folhas.folha2.style.display='block'
    tituloFolha2.innerHTML=titulos[1]
 
-   let teste=[
-    {nome:'Água (<strong>com gás</strong>)',valor:'2,99',descriçao:'',imagem:"imagens/agua-com-gas.png"},
-    
-    { nome:' Água (<strong>sem gás</strong',descriçao:'',valor:'1,99',imagem:"imagens/agua-sem-gas.png"},
-
-    { nome:'Guaravita',descriçao:'',valor:'1,99',imagem:'imagens/guaravita.png'}, 
-
-    { nome:'Coca-cola 310ml ',descriçao:'',valor:'5,00',imagem:'imagens/coca-cola.png'},
-
-    { nome:'Fanta Larranja 350ml',descriçao:'',valor:'5,00',imagem:'imagens/fanta-laranja.png'},
-
-    { nome:'Fanta Uva 350ml',descriçao:'',valor:'5,00',imagem:'imagens/fanta-uva.png'},
-
-    { nome:'Guanará Antártica',descriçao:'',valor:'5,00',imagem:'imagens/guarana-antartica.png'},
-
-    { nome:'Pepsi',descriçao:'',valor:'5,00',imagem:'imagens/pepsi.png'},    
-]
-
-teste.map((pro)=>{
-    let n= pro.valor
-    let n1=parseFloat(n.replace(",","."))
-   // let=n2=parseFloat(n1.replace(".",","))
-
-  //  console.log(n1)
-   // console.log(n2)
-})
 
 }
 
