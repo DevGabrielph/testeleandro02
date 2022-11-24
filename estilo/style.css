@@ -76,7 +76,7 @@ main{
     margin-top: 50px;
 }
 
-.listap{
+.listap,#lista-folha-itens{
     background-color: #463d3d7a;   
     max-width: 370px;
     border-radius: 20px;
@@ -84,7 +84,6 @@ main{
     margin: auto;
     margin-top: 100px;
     margin-bottom: 20px;
-    padding: 10px;
     box-shadow: 2px 3px 16px rgb(236, 220, 220);
     align-items: center;
     display: grid;
@@ -125,16 +124,8 @@ li:hover{
 
 }
 #lista-folha-itens{
-    background-color: #463d3d7a;
     display: none;
-    width: 370px;
-    border-radius: 20px;
-    height:70vh ;
     overflow-y: scroll;
-    box-shadow: 2px 3px 16px rgb(236, 220, 220);
-    margin: auto;
-    margin-top: 100px;
-    
 
 }
 
@@ -169,13 +160,7 @@ li:hover{
     
 }
 #titulo-cabeçalho-itens{
-    
-  margin: auto;
-  
-  
-    
-       
-    
+  margin: auto; 
 }
 .item{
     background-color: white;
@@ -190,7 +175,7 @@ li:hover{
     background-color: white;
     display: inline-flex;
     padding: 5px;
-    width: 320px;
+   
    transition: 0.5s;
 }
 
@@ -211,10 +196,10 @@ li:hover{
     display: inline-block;
 
 }
-.descriçao-produto:hover{
+/*.descriçao-produto:hover{
     transition: 1s;
     max-height: 70px;
-}
+}*/
 .titulo-item{
     font-size: 1.5em;
     
