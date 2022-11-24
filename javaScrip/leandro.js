@@ -18,6 +18,7 @@ let listaInicial={
     vita:document.querySelector('#vitaminas')
 
 
+
 }
 //-----VARIAVEIS-DA-FOLHA-2
 let tituloFolha2= document.querySelector('#titulo-cabeçalho-itens')
@@ -37,6 +38,10 @@ listaInicial.bebi.addEventListener('click',bebidas)
 listaInicial.sucos.addEventListener('click',sucosnaturais)
 
 listaInicial.vita.addEventListener('click',vitaminas)
+
+//--------------EVENTOS--FOLHA--2-------------------
+
+
 
 
 ///-------------ITENS-EMPLIHADOS(arrays)
@@ -135,7 +140,6 @@ let titulos=['Promoções','Porções','Hambúrgueres','Cachorro Quente','Bebida
 /// arrays com todos os itens 
 
         let itens=[]
-        console.log(itens)
 
 //-------FUNÇOES
 
@@ -160,53 +164,78 @@ function rendeTarefas(){
    
 
        itens[0].map((todo)=>{
-    
+
+        let divItem=document.createElement('div')
+        divItem.classList.add('item')
+
+        let imagemItem=document.createElement('img')
+        imagemItem.classList.add('img-item')
+        imagemItem.src=todo.imagem
+
+        let descriItem=document.createElement('div')
+        descriItem.classList.add('descri-item')
+
+        let h1Item=document.createElement('h1')
+        h1Item.classList.add('titulo-item')
+        let tituloItem=document.createTextNode(todo.nome)
+        h1Item.appendChild(tituloItem)
+
+        let caixaDescriçao=document.createElement('div')
+        caixaDescriçao.classList.add('descriçao-produto')
+        let textoDescriçao=document.createTextNode(todo.descriçao)
+        caixaDescriçao.appendChild(textoDescriçao)
 
 
-        let divElement=document.createElement('div')//criando caixa de cada item
-        divElement.classList.add('item')//inserindo a classe dos itens 
-        listaItemns.appendChild(divElement)//inserindo caixa do item dentro da lista de itens
+        let caixaValor= document.createElement('div')
+        caixaValor.classList.add('valor')
 
-
-        let imagemItem=document.createElement('img')//criando 'img'
-        imagemItem.src=todo.imagem//dando caminho a imagem 
-        imagemItem.classList.add('img-item')//inserindo classe
-        divElement.appendChild(imagemItem) //inserindo imagem dentro da caixa do item
-
-        
-        let descriItem=document.createElement('div')//criando div de descrição
-        descriItem.classList.add('descri-item')//inserindo a classe 
-        divElement.appendChild(descriItem)//inserindo caixa de descrição dentro da caixa do item 
-
-        
-        let h1Element=document.createElement('h1')//criando titulo do item
-        h1Element.classList.add('titulo-item')//adicionando a classe do titulo
-        descriItem.appendChild(h1Element)//inserindo 'h1' dentro da descrição
-        let textoTitluloItem=document.createTextNode(todo.nome)//criando texto do titulo
-        h1Element.appendChild(textoTitluloItem)//inserindo texto dentro do item 
-
-
-        let descriçaoProduto=document.createElement('div')//criando caixa de descrição do produto
-        descriçaoProduto.classList.add('descrição-produto')//inserindo classe
-        descriItem.appendChild(descriçaoProduto)//inserindo descrição do produto dentro da descrição do item 
-        let textoDescriçao=document.createTextNode(todo.descriçao)//criando texto descrição
-        descriçaoProduto.appendChild(textoDescriçao)//inserindo texto
-
-        let caixaValor=document.createElement('div')//criando caixa valor
-        caixaValor.classList.add('valor')//inserindo classe
-        descriItem.appendChild(caixaValor)//inserindo caixa valor dentro da descrição do item 
 
         let valorItem=document.createElement('div')
         valorItem.classList.add('valor-item')
         caixaValor.appendChild(valorItem)
-        let preço=todo.valor
-        let valor=String(preço)
-        let textoValor=document.createTextNode(`R$ ${valor.replace(".",",")}`)
-        valorItem.appendChild(textoValor)
+        
+        let preço=todo.valor//variavel que recebe o valor
+        let valor=String(preço)//variavel que converte para string
+        let textoValor=document.createTextNode(`R$ ${valor.replace(".",",")}`)//criando texto covertendo "." para ","
+        valorItem.appendChild(textoValor)//inserindo texto dentro da caixa
+        
+        
 
+
+
+        
+        
+        
+        divItem.appendChild(imagemItem)
+        divItem.appendChild(descriItem)
+        descriItem.appendChild(h1Item)
+        descriItem.appendChild(caixaDescriçao)
+        descriItem.appendChild(caixaValor)
+
+        listaItemns.appendChild(divItem)
+
+        divItem.setAttribute("onclick","click2()")
+
+
+        /*
+        let caixaValor=document.createElement('div')//criando caixa valor
+        caixaValor.classList.add('valor')//inserindo classe
+        descriItem.appendChild(caixaValor)//inserindo caixa valor dentro da descrição do item 
+        
+        divElement.setAttribute("onclick","clickItem()")
+        imagemItem.setAttribute("onclick","clickItem()")
+        
+        
+        */
     })
 
+    
 }
+
+function click2(){
+    alert('oi')
+}
+    
 
 function promoçoes(){
     folhas.folha1.style.display='none'
