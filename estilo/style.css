@@ -341,8 +341,31 @@ li:hover{
     padding: 5px;
     border-bottom: 1px solid black;
 }
+.quantidade{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+    padding: 10px;
+    font-weight: bolder;
 
+}
 
+.adicionar-carrinho{
+    width: 350px;
+    margin: 10px;
+    padding: 3px;
+    font-size: 1.4em;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #35f54f;
+    border-radius: 10px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
+    border: 1px solid  white;
+    box-shadow: 2px 1px 9px white;
+}
+.adicionar-carrinho:hover{
+    padding: 2px;
+    box-shadow: 2px 1px 5px white;
+}
 .teste{
     width: 50px;
     height: 50px;
