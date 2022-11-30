@@ -2,7 +2,8 @@
 let folhas={
     
     folha1:document.querySelector('.listap'),
-    folha2:document.querySelector('#lista-folha-itens')
+    folha2:document.querySelector('#lista-folha-itens'),
+    folha3:document.querySelector('.folha-expand-itens')
     
 
 }
@@ -147,7 +148,7 @@ let titulos=['Promoções','Porções','Hambúrgueres','Cachorro Quente','Bebida
 
     
 
-//-------------botão-VOLTAR
+//-------------botão-VOLTAR-lista itens
 let volta =document.querySelector('#voltar')
 volta.addEventListener('click',voltar)
 function voltar(){
@@ -155,8 +156,13 @@ function voltar(){
     folhas.folha1.style.display='grid'
     folhas.folha2.style.display='none'
     rendeTarefas()
-
-   
+}
+//-----------BOTÃO---VOLTAR---ITENS-EXPAND
+let voltarExpadItens=document.querySelector('#voltar-folha-itens')
+voltarExpadItens.addEventListener('click',voltar2)
+function voltar2() {
+    folhas.folha3.style.display='none'
+    folhas.folha2.style.display='block'
 }
 function rendeTarefas(){
     listaItemns.innerHTML=""
@@ -185,27 +191,19 @@ function rendeTarefas(){
         let textoDescriçao=document.createTextNode(todo.descriçao)
         caixaDescriçao.appendChild(textoDescriçao)
 
-
         let caixaValor= document.createElement('div')
         caixaValor.classList.add('valor')
-
 
         let valorItem=document.createElement('div')
         valorItem.classList.add('valor-item')
         caixaValor.appendChild(valorItem)
-        
+
         let preço=todo.valor//variavel que recebe o valor
         let valor=String(preço)//variavel que converte para string
         let textoValor=document.createTextNode(`R$ ${valor.replace(".",",")}`)//criando texto covertendo "." para ","
         valorItem.appendChild(textoValor)//inserindo texto dentro da caixa
         
-        
 
-
-
-        
-        
-        
         divItem.appendChild(imagemItem)
         divItem.appendChild(descriItem)
         descriItem.appendChild(h1Item)
@@ -216,24 +214,14 @@ function rendeTarefas(){
 
         divItem.setAttribute("onclick","click2()")
 
-
-        /*
-        let caixaValor=document.createElement('div')//criando caixa valor
-        caixaValor.classList.add('valor')//inserindo classe
-        descriItem.appendChild(caixaValor)//inserindo caixa valor dentro da descrição do item 
-        
-        divElement.setAttribute("onclick","clickItem()")
-        imagemItem.setAttribute("onclick","clickItem()")
-        
-        
-        */
     })
 
     
 }
 
 function click2(){
-    alert('oi')
+    folhas.folha3.style.display='block'
+    folhas.folha2.style.display='none'
 }
     
 

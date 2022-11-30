@@ -157,8 +157,13 @@ li:hover{
     box-shadow: 2px 2px 8px  rgba(231, 225, 225, 0.726);
     position: fixed;
     
-    
+
 }
+#voltar:hover{
+    padding: 4px;
+}
+
+
 #titulo-cabeçalho-itens{
   margin: auto; 
 }
@@ -181,9 +186,11 @@ li:hover{
 
 
 .img-item{
-    max-width: 100px;
+    width: 100px;
+    max-height: 100px;
     align-items: center;
-    border-bottom-left-radius: 10px;
+    border-radius: 10px;
+    margin: auto 3px;
 }
 .descri-item{
     margin: auto;
@@ -206,6 +213,8 @@ li:hover{
     
 }
 .valor-item{
+    margin: auto;
+    text-align: center;
     font-size: larger;
     font-weight: bold;
 }
@@ -275,6 +284,64 @@ li:hover{
     
     
 }
+.folha-expand-itens{
+    background-color: #463d3d7a;   
+    max-width: 370px;
+    border-radius: 20px;
+    height:70vh ;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    box-shadow: 2px 3px 16px rgb(236, 220, 220);
+    align-items: center;
+    display: block;
+}
+.cabeçalho-expand-itens{
+    height: 70px;
+    position:relative;
+    display:inline-flex;
+    margin: auto;
+    border-radius: 20px 20px 0px 0px;
+    width: 370px;}
+#voltar-folha-itens{
+    margin: 20px;  
+    color: rgb(255, 255, 255);
+    font-size: 1.8em;
+    padding: 5px;
+    
+    position: fixed; 
+}
+#voltar-folha-itens:hover{
+    padding: 3px;
+}
+.nome-expand-itens{
+    margin: auto;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.945);
+    color: white;
+}
+.descri-expand-total{
+    
+    background-color: rgba(255, 255, 255, 0.966);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.descri-expand-caixa{
+    display: flex;
+    
+    
+}
+.descri-expand{
+    background-color: #975056;
+}
+.descriçao-produto-expand{
+    display: block;
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+    border-bottom: 1px solid black;
+}
+
 
 .teste{
     width: 50px;
