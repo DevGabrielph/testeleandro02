@@ -354,11 +354,11 @@ li:hover{
     border-radius: 10px;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
     border: 1px solid  white;
-    box-shadow: 2px 1px 9px white;
+    box-shadow: 2px 1px 5px white;
 }
 .adicionar-carrinho:hover{
-    padding: 2px;
-    box-shadow: 2px 1px 5px white;
+    background-color: #2cd342;
+    box-shadow: 2px 1px 9px white;
 }
 .quantidade{
     display: flex;
@@ -379,19 +379,16 @@ li:hover{
     margin: 5px;
     font-size: 1.2em;
     align-items: center;
+    background-color: #ee9953;
+    transition: 0.2s;
+    border: none;
 }
-#qtd-menos:hover,#qtd-mais:hover{
-    height: 25px;
-    width: 25px;
-    box-shadow: 1px 1px 9px black;
+#qtd-menos:active,#qtd-mais:active{
+    box-shadow: 2px 2px 8px black;
+    background-color: #c9742fc9;
+    
 }
 
-#qtd-menos{
-    background-color: #BF343F;
-}
-#qtd-mais{
-    background-color: #35f54f;
-}
 .adicionais-caixa{
     justify-content: space-between;
     background-color: #e4d485dc;
