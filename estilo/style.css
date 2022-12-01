@@ -354,6 +354,7 @@ li:hover{
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
     border: 1px solid  white;
     box-shadow: 2px 1px 5px white;
+    color: black;
 }
 .adicionar-carrinho:hover{
     background-color: #2cd342;
@@ -381,6 +382,7 @@ li:hover{
     background-color: #ee9953;
     transition: 0.1s;
     border: none;
+    color: black;
 }
 #qtd-menos:active,#qtd-mais:active{
     box-shadow: 3px 3px 10px black;
