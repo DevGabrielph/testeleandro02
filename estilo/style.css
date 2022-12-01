@@ -345,7 +345,7 @@ li:hover{
 }
 
 .adicionar-carrinho{
-    width: 350px;
+    width: 340px;
     margin: 10px;
     padding: 3px;
     font-size: 1.4em;
@@ -400,6 +400,7 @@ li:hover{
     font-weight: bolder;
     align-items: center;
     border-radius: 20px;
+    display: none;
     
 
 }
@@ -408,6 +409,19 @@ li:hover{
     display: flex;
     justify-content: space-around;
     
+}
+#caixa-observação{
+    width: 320px;
+    height: 50px;
+    margin: 10px;
+    padding: 3px;
+    font-size: 1.4em;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #e2ffe6c5;
+    border-radius: 10px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
+    border: 1px solid  rgb(172, 171, 171);
+    box-shadow: 2px 1px 9px white;
 }
 
 
