@@ -5,8 +5,11 @@ let folhas={
     folha2:document.querySelector('#lista-folha-itens'),
     folha3:document.querySelector('.folha-expand-itens')
     
-
+    
 }
+
+
+
 
 //----VARIAVEIS-DA-FOLHA-1
 let listaInicial={
@@ -18,7 +21,7 @@ let listaInicial={
     sucos:document.querySelector('#sucos'),
     vita:document.querySelector('#vitaminas')
 
-
+    
 
 }
 //-----VARIAVEIS-DA-FOLHA-2
@@ -47,8 +50,8 @@ listaInicial.vita.addEventListener('click',vitaminas)
 
 ///-------------ITENS-EMPLIHADOS(arrays)
 let promo=[
-    { nome:'2 X-tudos',descriçao:' Pão, carne, queijo, presunto, bacon, ovo, alface, ketchup, maionese temperada, e batata palha.',valor:19.99,imagem:"imagens/x-tudo.png"},
-
+   { nome:'2 X-tudos',descriçao:' Pão, carne, queijo, presunto, bacon, ovo, alface, ketchup, maionese temperada, e batata palha.',valor:19.99,imagem:"imagens/x-tudo.png"},
+    
     { nome:'Combo X-burguer',descriçao:' lanche + batata frita + guaravita ou guaracamp.',valor:11.99,imagem:"imagens/x-tudo.png"},
 
     { nome:'Combo Duplo cheddar',descriçao:'  lanche + batata frita + guaravita ou guaracamp.',valor:16.00,imagem:"imagens/x-tudo.png"},
@@ -59,18 +62,18 @@ let promo=[
 ]
 let por=[
         { nome:' Batata Frita 200g',descriçao:'<strong>Descrição:</strong>Batata frita , ketchup, maionese temperada,queijo ralado e orégano.',valor:'R$ 7,00',imagem:''},
-    
+        
         { nome:'Batata Frita 400g',descriçao:'<strong>Descrição:</strong>   Batata frita , calabresa, ketchup, maionese temperada,queijo ralado e orégano.',valor:'R$ 14,00',imagem:''}
-]
-let Hamb=[
-            { nome:'Hambúrguer',descriçao:'<strong>Descrição:</strong>   Pão, carne, alface, ketchup ,maionese temperada , e batata palha.',valor:'R$ 5,00',imagem:'imagens/x-tudo.png'},
-    
-            { nome:'X-Búrguer',descriçao:'<strong>Descrição:</strong>   Pão, carne, queijo, alface, ketchup ,maionese temperada , e batata palha.',valor:'R$ 6,00',imagem:'imagens/x-tudo.png'},
-    
+    ]
+    let Hamb=[
+        { nome:'Hambúrguer',descriçao:'<strong>Descrição:</strong>   Pão, carne, alface, ketchup ,maionese temperada , e batata palha.',valor:'R$ 5,00',imagem:'imagens/x-tudo.png'},
+        
+        { nome:'X-Búrguer',descriçao:'<strong>Descrição:</strong>   Pão, carne, queijo, alface, ketchup ,maionese temperada , e batata palha.',valor:'R$ 6,00',imagem:'imagens/x-tudo.png'},
+        
             { nome:'Duplo X-Búrguer ',descriçao:' <strong>Descrição:</strong>  Pão, 2 carnes, 2 queijos, alface, ketchup ,maionese temperada , e batata palha.',valor:'R$ 10,00',imagem:'imagens/x-tudo.png'},
     
             { nome:'Duplo Cheddar',descriçao:'<strong>Descrição:</strong>Pão, 2 carnes, 2 cheddar, alface, ketchup ,maionese temperada , e batata palha.',valor:'R$ 10,00',imagem:'imagens/x-tudo.png'},
-    
+            
             { nome:'X-Egg ',descriçao:' <strong>Descrição:</strong> Pão, carne, queijo , alface, ketchup ,maionese temperada , e batata palha.',valor:' R$ 9,00',imagem:'imagens/x-tudo.png'},
     
             { nome:'X-Tudo',descriçao:'<strong>Descrição:</strong>   Pão, carne, queijo, presunto, bacon, ovo, alface, ketchup ,maionese temperada , e batata palha.',valor:'R$ 9,00',imagem:'imagens/x-tudo.png'},
@@ -78,14 +81,14 @@ let Hamb=[
             { nome:'X-Trovão',descriçao:'<strong>Descrição:</strong>    Pão, 2 carnes, queijo, presunto, bacon, ovo, alface, ketchup ,maionese temperada , e batata palha.',valor:'R$ 14,00',imagem:'imagens/x-tudo.png'},
     
             { nome:'X-Tudão',descriçao:' <strong>Descrição:</strong> Pão, 2 carnes, 2 queijos, 2 presuntos, bacon, 2 ovos, alface, ketchup ,maionese temperada , e batata palha.',valor:'R$ 16,00',imagem:'imagens/x-tudo.png'},
-    
+            
             { nome:'X-Calabresa',descriçao:' <strong>Descrição:</strong> Pão, carne, queijo, presunto, calabresa, ovo, alface, ketchup ,maionese temperada , e batata palha.',valor:'R$ 13,00',imagem:'imagens/x-tudo.png'},
-    
+            
             { nome:'X-Picanha',descriçao:'<strong>Descrição:</strong> Pão, carne de picanha 120g, queijo, presunto, bacon, ovo, alface, ketchup ,maionese temperada , e batata palha.',valor:'R$ 16,0',imagem:'imagens/x-tudo.png'}
 ] 
- let cachorro =[
+let cachorro =[
                 { nome:'Linguiça',descriçao:'<strong>Descrição:</strong>    Pão, salcicha, molho, ketchup, maionese, ovo de codorna, azeite, azeitona, queijo relado, alho torrado,cheddar,catupiry e batta palha .',valor:'R$ 12,00',imagem:''},
-    
+                
                 { nome:'Salcicha',descriçao:'<strong>Descrição:</strong> Pão, salcicha, molho, ketchup, maionese, ovo de codorna, azeite, azeitona, queijo relado, alho torrado,cheddar,catupiry e batta palha',valor:'R$ 10,00',imagem:''}
 ]
  let bebida=[
@@ -93,45 +96,45 @@ let Hamb=[
                     descriçao:'',imagem:"imagens/agua-com-gas.png"},
                     
                     { nome:' Água (<strong>sem gás</strong',descriçao:'',valor:'R$ 1,99',imagem:"imagens/agua-sem-gas.png"},
-        
+                    
                     { nome:'Guaravita',descriçao:'',valor:'R$ 1,99',imagem:'imagens/guaravita.png'}, 
-        
+                    
                     { nome:'Coca-cola 310ml ',descriçao:'',valor:'R$5,00',imagem:'imagens/coca-cola.png'},
         
                     { nome:'Fanta Larranja 350ml',descriçao:'',valor:'R$5,00',imagem:'imagens/fanta-laranja.png'},
         
                     { nome:'Fanta Uva 350ml',descriçao:'',valor:'R$5,00',imagem:'imagens/fanta-uva.png'},
-        
+                    
                     { nome:'Guanará Antártica',descriçao:'',valor:'R$5,00',imagem:'imagens/guarana-antartica.png'},
         
                     { nome:'Pepsi',descriçao:'',valor:'R$ 5,00',imagem:'imagens/pepsi.png'},    
-]       
-let sucos =[
-
-    { nome:'Suco de Abacaxi com Hortelã ',descriçao:'',valor:'RS6,00',imagem:''},
-
-    { nome:'Suco de Maracujá',descriçao:'',valor:'R$ 6,00',imagem:''},
-
-    { nome:'Cupuaçu',descriçao:'',valor:'R$ 6,00',imagem:''},
+                ]       
+                let sucos =[
+                    
+                    { nome:'Suco de Abacaxi com Hortelã ',descriçao:'',valor:'RS6,00',imagem:''},
+                    
+                    { nome:'Suco de Maracujá',descriçao:'',valor:'R$ 6,00',imagem:''},
+                    
+                    { nome:'Cupuaçu',descriçao:'',valor:'R$ 6,00',imagem:''},
 
     { nome:'Suco de Manga',descriçao:'',valor:'R$ 6,00',imagem:''},
 
     { nome:'Suco de Graviola',descriçao:'',valor:'R$ 6,00',imagem:''},
 
     { nome:'Suco de Caju',descriçao:'',valor:'R$ 6,00',imagem:''},
-
+    
     { nome:'Suco de Acerola',descriçao:'',valor:'R$ 6,00',imagem:''}
 ]     
 let vita=[
-
+    
     { nome:'Abacaxi com Hortelã ao Leite',descriçao:'', valor:`R$ 7,00`,imagem:''},
-
+    
     { nome:'Maracujá ao Leite',descriçao:'',valor:'R$ 7,00',imagem:''},
 
     { nome:'Cupuaçu ao Leite',descriçao:'',valor:'R$ 7,00',imagem:''},
 
     { nome:'Manga ao Leite',descriçao:'',valor:'R$ 7,00',imagem:''},
-
+    
     { nome:'Morango ao Leite',descriçao:'',valor:'R$ 7,00',imagem:''}
 ] 
 
@@ -140,13 +143,14 @@ let titulos=['Promoções','Porções','Hambúrgueres','Cachorro Quente','Bebida
 
 /// arrays com todos os itens 
 
-        let itens=[]
-
+        let itens={}
+        
 //-------FUNÇOES
 
 
 
-    
+
+
 
 //-------------botão-VOLTAR-lista itens
 let volta =document.querySelector('#voltar')
@@ -212,16 +216,22 @@ function rendeTarefas(){
 
         listaItemns.appendChild(divItem)
 
-        divItem.setAttribute("onclick","click2()")
-
+        let posiçao=itens[0].indexOf(todo)
+        
+        
+        
+        divItem.setAttribute("onclick",`click2(${posiçao})`)
+        
     })
-
+    
     
 }
 
-function click2(){
+function click2(posiçao){
     folhas.folha3.style.display='block'
     folhas.folha2.style.display='none'
+    console.log(posiçao)
+    console.log(itens[0].nome[0])
 }
     
 
