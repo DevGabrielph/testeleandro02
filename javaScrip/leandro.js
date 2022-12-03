@@ -143,7 +143,7 @@ let titulos=['Promoções','Porções','Hambúrgueres','Cachorro Quente','Bebida
 
 /// arrays com todos os itens 
 
-        let itens={}
+        let itens=[]
         
 //-------FUNÇOES
 
@@ -227,7 +227,7 @@ function rendeTarefas(){
     
 }
 
-function click2(posiçao){
+function click2(){
     folhas.folha3.style.display='block'
     folhas.folha2.style.display='none'
     console.log(posiçao)
