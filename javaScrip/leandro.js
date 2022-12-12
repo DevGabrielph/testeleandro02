@@ -56,7 +56,7 @@ let promo=[
 
     { nome:'Combo Duplo cheddar',descriçao:'  lanche + batata frita + guaravita ou guaracamp.',valor:16.00,imagem:"imagens/x-tudo.png"},
 
-    { nome:'Combo X-Tudo ',descriçao:' lanche + batata frita + guaravita ou guaracamp.',valor:16.00,imagem:"imagens/x.tudo.png"},
+    { nome:'Combo X-Tudo ',descriçao:' lanche + batata frita + guaravita ou guaracamp.',valor:16.00,imagem:"imagens/x-tudo.png"},
 
     { nome:'Combo X-Picanha',descriçao:'  lanche + batata frita + refrigerante lata.',valor:25.00 ,imagem:"imagens/x-tudo.png"}
 ]
@@ -169,7 +169,6 @@ function voltarExpand() {
     itemExpand=[]
     quantidade=1
     
-    console.log(itemExpand)
 }
 
 function rendeTarefas(){
@@ -268,7 +267,6 @@ function clickitem(posiçaoItem){
 
     let imagemExpand=document.querySelector("#imagem-expand")
     imagemExpand.src=itemExpand[0].imagem
-    console.log(imagemExpand)
 
     let descriçaoProdutoExpand=document.querySelector('.descriçao-produto-expand')
     descriçaoProdutoExpand.innerHTML=itemExpand[0].descriçao
@@ -290,7 +288,10 @@ function clickitem(posiçaoItem){
 }
 let carrinho=[]
 function adicionarCarrinho(){
-    
+   folhas.folha3.style.display='none' 
+   carrinho.push(itemExpand)
+
+   console.log(carrinho)
     
 }
 
