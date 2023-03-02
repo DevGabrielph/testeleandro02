@@ -3,7 +3,8 @@ let folhas={
     
     folha1:document.querySelector('.listap'),
     folha2:document.querySelector('#lista-folha-itens'),
-    folha3:document.querySelector('.folha-expand-itens')
+    folha3:document.querySelector('.folha-expand-itens'),
+    folha4:document.querySelector('#interior-carrinho')
     
     
 }
@@ -27,6 +28,9 @@ let listaInicial={
 //-----VARIAVEIS-DA-FOLHA-2
 let tituloFolha2= document.querySelector('#titulo-cabeçalho-itens')
 let listaItemns=document.querySelector('#lista-itens')
+//---VARIAVEIS--DA--FOLHA--ADICIONAIS
+let adicionaisCaixa=document.querySelector('#itens-adicionais')
+
 
 //--------EVENTOS-LISTA-INICIAL---
 listaInicial.promo.addEventListener('click',promoçoes)
@@ -50,7 +54,7 @@ listaInicial.vita.addEventListener('click',vitaminas)
 
 ///-------------ITENS-EMPLIHADOS(arrays)
 let promo=[
-   { nome:'2 X-tudos',descriçao:' Pão, carne, queijo, presunto, bacon, ovo, alface, ketchup, maionese temperada, e batata palha.',valor:19.99,imagem:"imagens/x-tudo.png"},
+   { nome:'2 X-tudos',descriçao:' Pão, carne, queijo, presunto, bacon, ovo, alface, ketchup, maionese temperada, e batata palha.',valor:19.99,imagem:"imagens/x-tudo.png",obs:''},
     
     { nome:'Combo X-burguer',descriçao:' lanche + batata frita + guaravita ou guaracamp.',valor:11.99,imagem:"imagens/x-tudo.png"},
 
@@ -166,8 +170,11 @@ voltarExpadItens.addEventListener('click',voltarExpand)
 function voltarExpand() {
     folhas.folha3.style.display='none'
     folhas.folha2.style.display='block'
+    limparTextoArea()
+    
+    /*----------------------------------------*/
     itemExpand=[]
-    quantidade=1
+    console.log(itemExpand)
     
 }
 
@@ -225,6 +232,8 @@ function rendeTarefas(){
         
         
         divItem.setAttribute("onclick",`clickitem(${posiçaoItem})`)
+
+
         
         
     })
@@ -233,31 +242,15 @@ function rendeTarefas(){
 }
 let itemExpand=[]//-------array-item-expandido
 
-let quantidade=1//-----quantidade
 
-let qtdMaisExpand=document.querySelector('.qtd-mais')
-qtdMaisExpand.setAttribute("onclick","mais()")
-
-let qtdMenosExpand=document.querySelector('.qtd-menos') 
-qtdMenosExpand.setAttribute("onclick","menos()")
-
-function mais(){
-    quantidade=quantidade+1
-    clickitem()
-}
-function menos(){
-    quantidade=quantidade-1
-    if(quantidade<1){
-        quantidade=1
-    }
-    clickitem()
-    
-}
 
 function clickitem(posiçaoItem){
+    //alert('clickitem')
+    
     folhas.folha3.style.display='block'
     folhas.folha2.style.display='none'
     itemExpand.push(itens[posiçaoItem])
+
 
     
 
@@ -276,24 +269,85 @@ function clickitem(posiçaoItem){
     let preçoUnitario=String(preçoU.toFixed(2))
     valorUnitario.innerHTML=(`R$ ${preçoUnitario.replace(".",",")}`)
 
-    let valorTotalItem=document.querySelector('.valor-total-item')
+    var valorTotalItem=document.querySelector('.valor-total-item')
     let qtd=document.querySelector('.qtd')
-    qtd.innerHTML=quantidade
-    let resultadoPT=preçoU*quantidade
+    
 
-    let resultadoPTstring=String(resultadoPT.toFixed(2))
-    valorTotalItem.innerHTML=(`R$ ${resultadoPTstring.replace(".",",")}`)
-   
-    console.log(itemExpand)
+
 }
-let carrinho=[]
-function adicionarCarrinho(){
-   folhas.folha3.style.display='none' 
-   carrinho.push(itemExpand)
 
-   console.log(carrinho)
+
+
+
+/*{nome:"",descriçao:"",imagem:"",valor:0,observaçao:"",quantidade}*/
+
+
+
+
+function limparTextoArea(){
+    let textArea=document.querySelector('#caixa-observaçao')
+    textArea.value=''
+
     
 }
+function adicionarCarrinho(){
+  let caixaObservacao= document.querySelector('#caixa-observaçao')
+  itemExpand[0].obs = caixaObservacao.value
+
+  folhas.folha3.style.display='none'
+  folhas.folha4.style.display='block'
+
+
+
+
+  
+    console.log(itemExpand[0])
+        
+    }
+
+
+function addItensCarrinho(){
+
+
+    carrinho.push(itemExpand)
+    //carrinho.push(resultadoPT)
+/*
+   console.log(itemExpand)
+   console.log(carrinho)
+   console.log(resultadoPT)*/
+
+
+}
+function buttonMaisAdc(posiçaoAdc){
+    
+    adicionais[posiçaoAdc].quantidade= adicionais[posiçaoAdc].quantidade + 1
+    adicionarCarrinho()
+    
+    
+   
+}
+function buttonMenosAdc(posiçaoAdc){
+    adicionais[posiçaoAdc].quantidade = adicionais[posiçaoAdc].quantidade - 1
+    if(adicionais[posiçaoAdc].quantidade=0){
+        adicionais[posiçaoAdc].quantidade=adicionais[posiçaoAdc].quantidade-0
+    }
+    adicionarCarrinho()
+}
+
+function finalizarPedido(){
+    alert('aqui foi')
+}
+function continuarComprando(){
+    alert('aqui foi')
+}
+let voltarcarrinho=document.querySelector('#voltar-carrinho')
+voltarcarrinho.addEventListener('click', voltarCarrinho)
+function voltarCarrinho(){
+    folhas.folha4.style.display='none'
+    folhas.folha3.style.display='block'
+
+}
+
 
 function promoçoes(){
     folhas.folha1.style.display='none'

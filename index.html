@@ -32,8 +32,18 @@
                     <h1 id="titulo-carrinho">Carrinho</h1>
                </div>
                <div id="area-carrinho"></div>
-               <div id="area-pagamento"></div>
-               <button type="submit" id='botao-finalizar' onclick="finalizarpedido()">Finalizar pedido</button>
+               <div id="area-pagamento">
+                <div id="area-input">
+                    <p>Cupom Desconto:</p>
+                    <input type="text" name="cupom" id="cupom">
+                </div>
+                <div id="area-preço-final">
+                    <p id="text-valor-final" >Valor Total :</p>
+                    <p  id="text-valor-final">R$ 19,00</p>
+                </div>
+               </div>
+               <button type="submit" id='botao-continuar' onclick="continuarComprando()">Continuar Comprando</button>
+               <button type="submit" id='botao-finalizar' onclick="finalizarPedido()">Finalizar pedido</button>
            </div>
 
         
@@ -105,62 +115,41 @@
                                 <div class="descriçao-produto-expand"></div>
                             </div>
                         </div>
-                        <div class="quantidade">
-                            <p>Quantidade Item :</p>
-                            <p >
-                                <button class="qtd-menos" >-</button>
-                                <p class="qtd" ></p>
-                                <button class="qtd-mais">+</button>
-                            </p>
-                        </div>
+ <!-- 
+
+     <div class="quantidade">
+         <p>Quantidade Item :</p>
+         <p >
+             <button class="qtd-menos" >-</button>
+             <p class="qtd" ></p>
+             <button class="qtd-mais">+</button>
+         </p>
+     </div>
+ -->                       
                         <div class="valor-item-expand">
                             <div class="valor-item">
                                 <p>Valor item:</p>
                                 <p class="valor-unitario" ></p>
                             </div>
-                            <div class="valor-item">
-                                <p >Valor total do item:</p>
-                                <p class="valor-total-item"></p>
-                            </div>
+                            <!--
+                                <div class="valor-item">
+                                    <p >Valor total do item:</p>
+                                    <p class="valor-total-item"></p>
+                                </div>
+
+                            -->
                             
                         </div>
-                        <textarea name="observaçoes" id="caixa-observaçao" cols="5" rows="5" placeholder="Digite Suas Observações : " ></textarea>
+                        <textarea name="observaçoes" id="caixa-observaçao" cols="4" rows="3" placeholder="Digite Suas Observações : " ></textarea>
                         
                         
                     </div>
                     <button class="adicionar-carrinho" onclick="adicionarCarrinho()">Adicionar ao Carrinho</button>
                 </div>
-                <!--
+                
 
-                    <div class="adicionais-caixa">
-                        
-                        <div>
-                            <p>carne :</p>
-                            <p> <button id="qtd-mais" >+</button>
-                                1
-                                <button id="qtd-menos" >-</button></p>
-                            </div>
-                            <div>
-                                <p>carne :</p>
-                                <p> <button id="qtd-mais" >+</button>
-                                    1
-                                    <button id="qtd-menos" >-</button></p>
-                                </div>
-                                <div>
-                                    <p>carne :</p>
-                                    <p> <button id="qtd-mais" >+</button>
-                                        1
-                                        <button id="qtd-menos" >-</button></p>
-                                    </div>
-                                    <div>
-                                        <p>carne :</p>
-                                        <p> <button id="qtd-mais" >+</button>
-                                            1
-                                            <button id="qtd-menos" >-</button></p>
-                                        </div>
-                                        
-                                    </div>
-                                -->
+               
+                                
         
 
 

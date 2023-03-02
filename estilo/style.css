@@ -89,6 +89,10 @@ main{
     display: grid;
     
 }
+.listap{
+    display: grid;
+}
+
 
 nav>div{
     
@@ -219,72 +223,136 @@ li:hover{
     font-weight: bold;
 }
 
-#interior-carrinho{
-    color: white;
-    width: 370px;
-    height: 70vh;
-    background-color: #ffffffd2;
-    box-shadow: 2px 3px 16px rgb(253, 243, 243);
-    border-radius: 20px;
-    margin: auto;
-    margin-top: 35px;
-    display: none;
-    align-items: center;
 
-    
+#interior-carrinho{
+    display: none;
+    max-width: 370px;
+    margin: auto;
+    align-items: center;
+    background-color: #463d3d7a; 
+    border-radius: 20px;  
+    animation: alternate;
 }
 
 #cabeçalho-carrinho{
-    background-image:linear-gradient(to left, rgb(255, 254, 254) ,rgb(206, 202, 202)) ;
+    background-image:linear-gradient(to bottom, rgba(214, 208, 208, 0.795) ,#463d3d7a,transparent) ;
     height: 70px;
     position:fixed;
     display:inline-flex;
     margin: auto;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px 20px 20px 20px;
     width: 370px;
+    
 }
 
 #titulo-carrinho{
-    
+    font-family: 'Times New Roman', Tims, eserif;
     margin: auto;
-    color: black;
-    text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.534);
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 3px 4px rgba(78, 78, 78, 0.637);
     
     
 }
 #area-carrinho{
     display: inline-block;
+    margin: 5px;
     margin-top: 75px;
+    margin: 75px,5px,0px,5px;
     background-color: rgb(206,202,202);
-    width: 370px;
-    height: 330px;
+    width: 360px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 1px 4px 5px rgb(97, 97, 97);
 
 }
 #area-pagamento{
-    width: 370px;
+    
+    box-shadow: 1px 4px 5px rgb(97, 97, 97);
+    margin: 5px;
+    margin-top: 0px;
+
+    border-radius: 10px;
+    width: 360px;
     height: 75px;
     background-color: rgb(206,202,202);
 
 
 }
+#area-input,#area-preço-final{
+    display: inline-flex;
+    margin: 7px;
+    width: 340px;
+    justify-content: space-between;
+    align-items: center;
+}
+#cupom{
+    width: 100px;
+}
+#area-preço-final{
+    font-size: 1.4em;
+    font-weight: bold;
+}
+#text-valor-final{
+    margin-bottom: 20px;
+}
+#botao-continuar{
+    display: inline-block;
+    margin-left: 25px;
+    width: 320px;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 1.4em;
+    border-radius: 20px;
+    background-image:linear-gradient(to left,rgb(5, 145, 5),rgb(71, 196, 33),rgb(130, 214, 123));
+    text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.534);
+    box-shadow: 2px 2px 8px rgb(208, 207, 209);
+    padding: 5px;
+    color: #ffffffc0;
+    
+    font-family: 'Times New Roman', T
+}
+#botao-continuar:active{
+    background-image:linear-gradient(to left,rgba(5, 145, 5, 0.705),rgba(71, 196, 33, 0.534),rgba(131, 214, 123, 0.534));
+    
+    box-shadow: 2px 2px 8px rgb(254, 253, 255);
+    width: 310px;
+    margin-left: 30px;
+    padding: 2px;
+    margin-top: 11px;
+
+}
 
 #botao-finalizar{
-    display: block;
-    margin-left: 10px; ;
-    margin-top: 7px;
-    width: 350px;
-    height: 35px;
-    font-weight: bold;
+    display: inline-block;
+    margin-left: 25px;
+    width: 320px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
     font-size: 1.4em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    border: solid 1px black;
     border-radius: 20px;
     background-image:linear-gradient(to right,rgb(5, 145, 5),rgb(71, 196, 33),rgb(130, 214, 123));
     text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.534);
+    box-shadow: 2px 2px 8px rgb(208, 207, 209);
+    padding: 5px;
+    color: #ffffffa6;
+    
+    font-family: 'Times New Roman', T
     
     
 }
-.folha-expand-itens{
+#botao-finalizar:active{
+    background-image:linear-gradient(to right,rgba(5, 145, 5, 0.705),rgba(71, 196, 33, 0.534),rgba(131, 214, 123, 0.534));
+    
+    box-shadow: 2px 2px 8px rgb(254, 253, 255);
+    width: 310px;
+    margin-left: 30px;
+    padding: 2px;
+    margin-top: 8px;
+    margin-bottom: 23px;
+    
+}
+.folha-expand-itens,.adicionais-caixa{
     background-color: #463d3d7a;   
     max-width: 370px;
     border-radius: 20px;
@@ -293,9 +361,11 @@ li:hover{
     margin-bottom: 20px;
     box-shadow: 2px 3px 16px rgb(236, 220, 220);
     align-items: center;
-    display: block;
     padding: 10px ;
     
+}
+.folha-expand-itens{
+    display: none;
 }
 .cabeçalho-expand-itens{
     height: 70px;
@@ -330,6 +400,7 @@ li:hover{
 
 .descri-expand-caixa{
     display: flex;
+    margin: 10px;
     
     
 }
@@ -343,7 +414,7 @@ li:hover{
     padding: 5px;
 }
 
-.adicionar-carrinho{
+.adicionar-carrinho,.avançar{
     width: 340px;
     margin: 10px;
     padding: 3px;
@@ -357,11 +428,11 @@ li:hover{
     color: black;
     transition: .3s;
 }
-.adicionar-carrinho:hover{
+.adicionar-carrinho:hover,.avançar:hover{
     background-color: #2cc540;
     box-shadow: 2px 1px 9px white;
 }
-.adicionar-carrinho:active{
+.adicionar-carrinho:active,.avançar:active{
     background-color: #0e3d15;
     box-shadow: 3px 3px 9px rgb(212, 210, 210);
 }
@@ -402,8 +473,8 @@ li:hover{
 
 .adicionais-caixa{
     justify-content: space-between;
-    background-color: #e4d485dc;
-    margin:10px ;
+    background-color: #e2d79fdc;
+    margin-top:100px ;
     font-size: 1.1em;
     font-weight: bolder;
     align-items: center;
@@ -412,12 +483,47 @@ li:hover{
     
 
 }
+
+.adicionais-caixa>h1{
+    text-align: center;
+    padding: 5px;
+}
 .adicionais-caixa>div{
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
+    display: inline;
+    margin: 5px;
+   
     
 }
+#total-adc{
+    display: flex;
+    justify-content: space-between;
+    margin:5px 15px ;
+}
+#total-adc>p{
+    font-size: 1.2em;
+    text-shadow: 2px 2px 4px rgba(85, 85, 85, 0.425);
+
+}
+.adicionais-caixa>div>div{
+    background-color: #bdb5b5;
+    display: flex;
+    margin: .5em;
+    padding: 5px;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, 0.548);
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.589);
+    
+}
+.adicionais-caixa>div>div>p{
+    display:flex;
+    align-items: center; 
+}
+.adicionais-caixa>div>div>span>p{
+    margin: 2px;
+    text-shadow: 2px 2px 4px rgba(85, 85, 85, 0.425);
+}
+
 #caixa-observaçao{
     width: 320px;
     margin: 10px;
