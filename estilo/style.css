@@ -566,9 +566,11 @@ li:hover{
     border-radius: 10px;
     background-color: #8c8f88;
     justify-content: space-between;
+    overflow-y: hidden;
 }
-.area-item-carrinho:hover{
+.area-item-carrinho:active{
     height: 100px;
+    overflow-y:scroll ;
     
     
 }
@@ -601,12 +603,15 @@ li:hover{
 .descri-carrinho{
     display: block;
     width: 150px;
-    height: 20px;
+    height: 30px;
+    background-color: #dacdd1;
     overflow: hidden;
+    border-radius: 5px;
+    padding: 5px;
 }
-.descri-carrinho:hover{
-    height: 60px;
-    overflow-Y: scroll;
+.descri-carrinho:active{
+    background-color: "#2cc540";
+    overflow: scroll;
 }
 .area-btn{
     margin: 5px;
