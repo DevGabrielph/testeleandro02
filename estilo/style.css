@@ -263,7 +263,11 @@ li:hover{
     height: 250px;
     border-radius: 10px;
     box-shadow: 1px 4px 5px rgb(97, 97, 97);
+    overflow-y: hidden;
 
+}
+#area-carrinho:hover{
+    overflow-y: scroll;
 }
 #area-pagamento{
     
@@ -553,4 +557,65 @@ li:hover{
     background-color: aliceblue;
     
 }
-   
+.area-item-carrinho{
+    display: inline-flex;
+    width: 330px;
+    height: 70px;
+    align-items: center;
+    margin: 10px 0px 0px 15px;
+    border-radius: 10px;
+    background-color: #8c8f88;
+    justify-content: space-between;
+}
+.area-item-carrinho:hover{
+    height: 100px;
+    
+    
+}
+.img-item-carrinho{
+    max-width: 50px;
+    max-height: 70px;
+    border-radius: 5px;
+    
+}
+
+
+.area-item{
+    display: inline-flex;
+    align-items: center;
+    width: 230px;
+    height: 50px;
+    justify-content: space-around;
+}
+
+.valor-unitario-carrinho,.nome-item-carrinho{
+    font-size: 1.3em;
+    font-weight: bold;
+
+}
+
+.titulo-item-carrinho{
+    display: flex;
+    justify-content: space-between;
+}
+.descri-carrinho{
+    display: block;
+    width: 150px;
+    height: 20px;
+    overflow: hidden;
+}
+.descri-carrinho:hover{
+    height: 60px;
+    overflow-Y: scroll;
+}
+.area-btn{
+    margin: 5px;
+    padding: 3px;
+    align-items: center;
+}
+.img-delete,.img-edit{
+    margin: 2px;
+}
+.img-delete:hover,.img-edit:hover{
+    padding: 1px;
+}

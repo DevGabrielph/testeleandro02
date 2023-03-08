@@ -56,78 +56,78 @@ listaInicial.vita.addEventListener('click',vitaminas)
 let promo=[
    { nome:'2 X-tudos',descriçao:' Pão, carne, queijo, presunto, bacon, ovo, alface, ketchup, maionese temperada, e batata palha.',valor:19.99,imagem:"imagens/x-tudo.png",obs:''},
     
-    { nome:'Combo X-burguer',descriçao:' lanche + batata frita + guaravita ou guaracamp.',valor:11.99,imagem:"imagens/x-tudo.png"},
+    { nome:'Combo X-burguer',descriçao:' lanche + batata frita + guaravita ou guaracamp.',valor:11.99,imagem:"imagens/x-tudo.png",obs:''},
 
-    { nome:'Combo Duplo cheddar',descriçao:'  lanche + batata frita + guaravita ou guaracamp.',valor:16.00,imagem:"imagens/x-tudo.png"},
+    { nome:'Combo Duplo cheddar',descriçao:'  lanche + batata frita + guaravita ou guaracamp.',valor:16.00,imagem:"imagens/x-tudo.png",obs:''},
 
-    { nome:'Combo X-Tudo ',descriçao:' lanche + batata frita + guaravita ou guaracamp.',valor:16.00,imagem:"imagens/x-tudo.png"},
+    { nome:'Combo X-Tudo ',descriçao:' lanche + batata frita + guaravita ou guaracamp.',valor:16.00,imagem:"imagens/x-tudo.png",obs:''},
 
-    { nome:'Combo X-Picanha',descriçao:'  lanche + batata frita + refrigerante lata.',valor:25.00 ,imagem:"imagens/x-tudo.png"}
+    { nome:'Combo X-Picanha',descriçao:'  lanche + batata frita + refrigerante lata.',valor:25.00 ,imagem:"imagens/x-tudo.png",obs:''}
 ]
 let por=[
-        { nome:' Batata Frita 200g',descriçao:'Batata frita , ketchup, maionese temperada,queijo ralado e orégano.',valor:7.00,imagem:''},
+        { nome:' Batata Frita 200g',descriçao:'Batata frita , ketchup, maionese temperada,queijo ralado e orégano.',valor:7.00,imagem:'',obs:''},
         
-        { nome:'Batata Frita 400g',descriçao:'Batata frita , calabresa, ketchup, maionese temperada,queijo ralado e orégano.',valor:14.00,imagem:''}
+        { nome:'Batata Frita 400g',descriçao:'Batata frita , calabresa, ketchup, maionese temperada,queijo ralado e orégano.',valor:14.00,imagem:'',obs:''}
     ]
  let Hamb=[
-        { nome:'Hambúrguer',descriçao:' Pão, carne, alface, ketchup ,maionese temperada , e batata palha.',valor:5.00,imagem:'imagens/x-tudo.png'},
+        { nome:'Hambúrguer',descriçao:' Pão, carne, alface, ketchup ,maionese temperada , e batata palha.',valor:5.00,imagem:'imagens/x-tudo.png',obs:''},
         
-        { nome:'X-Búrguer',descriçao:'  Pão, carne, queijo, alface, ketchup ,maionese temperada , e batata palha.',valor:6.00,imagem:'imagens/x-tudo.png'},
+        { nome:'X-Búrguer',descriçao:'  Pão, carne, queijo, alface, ketchup ,maionese temperada , e batata palha.',valor:6.00,imagem:'imagens/x-tudo.png',obs:''},
         
-            { nome:'Duplo X-Búrguer ',descriçao:' Pão, 2 carnes, 2 queijos, alface, ketchup ,maionese temperada , e batata palha.',valor:10.00,imagem:'imagens/x-tudo.png'},
+            { nome:'Duplo X-Búrguer ',descriçao:' Pão, 2 carnes, 2 queijos, alface, ketchup ,maionese temperada , e batata palha.',valor:10.00,imagem:'imagens/x-tudo.png',obs:''},
     
-            { nome:'Duplo Cheddar',descriçao:'Pão, 2 carnes, 2 cheddar, alface, ketchup ,maionese temperada , e batata palha.',valor:10.00,imagem:'imagens/x-tudo.png'},
+            { nome:'Duplo Cheddar',descriçao:'Pão, 2 carnes, 2 cheddar, alface, ketchup ,maionese temperada , e batata palha.',valor:10.00,imagem:'imagens/x-tudo.png',obs:''},
             
-            { nome:'X-Egg ',descriçao:' Pão, carne, queijo , alface, ketchup ,maionese temperada , e batata palha.',valor:9.00,imagem:'imagens/x-tudo.png'},
+            { nome:'X-Egg ',descriçao:' Pão, carne, queijo , alface, ketchup ,maionese temperada , e batata palha.',valor:9.00,imagem:'imagens/x-tudo.png',obs:''},
     
-            { nome:'X-Tudo',descriçao:' Pão, carne, queijo, presunto, bacon, ovo, alface, ketchup ,maionese temperada , e batata palha.',valor:9.00,imagem:'imagens/x-tudo.png'},
+            { nome:'X-Tudo',descriçao:' Pão, carne, queijo, presunto, bacon, ovo, alface, ketchup ,maionese temperada , e batata palha.',valor:9.00,imagem:'imagens/x-tudo.png',obs:''},
     
-            { nome:'X-Trovão',descriçao:'   Pão, 2 carnes, queijo, presunto, bacon, ovo, alface, ketchup ,maionese temperada , e batata palha.',valor:14.00,imagem:'imagens/x-tudo.png'},
+            { nome:'X-Trovão',descriçao:'   Pão, 2 carnes, queijo, presunto, bacon, ovo, alface, ketchup ,maionese temperada , e batata palha.',valor:14.00,imagem:'imagens/x-tudo.png',obs:''},
     
-            { nome:'X-Tudão',descriçao:'  Pão, 2 carnes, 2 queijos, 2 presuntos, bacon, 2 ovos, alface, ketchup ,maionese temperada , e batata palha.',valor:16.00,imagem:'imagens/x-tudo.png'},
+            { nome:'X-Tudão',descriçao:'  Pão, 2 carnes, 2 queijos, 2 presuntos, bacon, 2 ovos, alface, ketchup ,maionese temperada , e batata palha.',valor:16.00,imagem:'imagens/x-tudo.png',obs:''},
             
-            { nome:'X-Calabresa',descriçao:'Pão, carne, queijo, presunto, calabresa, ovo, alface, ketchup ,maionese temperada , e batata palha.',valor:13.00,imagem:'imagens/x-tudo.png'},
+            { nome:'X-Calabresa',descriçao:'Pão, carne, queijo, presunto, calabresa, ovo, alface, ketchup ,maionese temperada , e batata palha.',valor:13.00,imagem:'imagens/x-tudo.png',obs:''},
             
-            { nome:'X-Picanha',descriçao:' Pão, carne de picanha 120g, queijo, presunto, bacon, ovo, alface, ketchup ,maionese temperada , e batata palha.',valor:16.00,imagem:'imagens/x-tudo.png'}
+            { nome:'X-Picanha',descriçao:' Pão, carne de picanha 120g, queijo, presunto, bacon, ovo, alface, ketchup ,maionese temperada , e batata palha.',valor:16.00,imagem:'imagens/x-tudo.png',obs:''}
 ] 
 let cachorro =[
-                { nome:'Linguiça',descriçao:' Pão, salcicha, molho, ketchup, maionese, ovo de codorna, azeite, azeitona, queijo relado, alho torrado,cheddar,catupiry e batta palha .',valor:12.00,imagem:''},
+                { nome:'Linguiça',descriçao:' Pão, salcicha, molho, ketchup, maionese, ovo de codorna, azeite, azeitona, queijo relado, alho torrado,cheddar,catupiry e batta palha .',valor:12.00,imagem:'',obs:''},
                 
-                { nome:'Salcicha',descriçao:' Pão, salcicha, molho, ketchup, maionese, ovo de codorna, azeite, azeitona, queijo relado, alho torrado,cheddar,catupiry e batta palha',valor:10.00,imagem:''}
+                { nome:'Salcicha',descriçao:' Pão, salcicha, molho, ketchup, maionese, ovo de codorna, azeite, azeitona, queijo relado, alho torrado,cheddar,catupiry e batta palha',valor:10.00,imagem:'',obs:''}
 ]
  let bebi=[
                     {nome:'Água (com gás)',valor:2.99,
-                    descriçao:'',imagem:"imagens/agua-com-gas.png"},
+                    descriçao:'',imagem:"imagens/agua-com-gas.png",obs:''},
                     
-                    { nome:' Água (sem gás)',descriçao:'',valor:1.99,imagem:"imagens/agua-sem-gas.png"},
+                    { nome:' Água (sem gás)',descriçao:'',valor:1.99,imagem:"imagens/agua-sem-gas.png",obs:''},
                     
-                    { nome:'Guaravita',descriçao:'',valor:1.99,imagem:'imagens/guaravita.png'}, 
+                    { nome:'Guaravita',descriçao:'',valor:1.99,imagem:'imagens/guaravita.png',obs:''}, 
                     
-                    { nome:'Coca-cola 310ml ',descriçao:'',valor:5.00,imagem:'imagens/coca-cola.png'},
+                    { nome:'Coca-cola 310ml ',descriçao:'',valor:5.00,imagem:'imagens/coca-cola.png',obs:''},
         
-                    { nome:'Fanta Larranja 350ml',descriçao:'',valor:5.00,imagem:'imagens/fanta-laranja.png'},
+                    { nome:'Fanta Larranja 350ml',descriçao:'',valor:5.00,imagem:'imagens/fanta-laranja.png',obs:''},
         
-                    { nome:'Fanta Uva 350ml',descriçao:'',valor:5.00,imagem:'imagens/fanta-uva.png'},
+                    { nome:'Fanta Uva 350ml',descriçao:'',valor:5.00,imagem:'imagens/fanta-uva.png',obs:''},
                     
-                    { nome:'Guanará Antártica',descriçao:'',valor:5.00,imagem:'imagens/guarana-antartica.png'},
+                    { nome:'Guanará Antártica',descriçao:'',valor:5.00,imagem:'imagens/guarana-antartica.png',obs:''},
         
-                    { nome:'Pepsi',descriçao:'',valor:5.00,imagem:'imagens/pepsi.png'},    
+                    { nome:'Pepsi',descriçao:'',valor:5.00,imagem:'imagens/pepsi.png',obs:''},    
                 ]       
 let sucos =[
                     
-                    { nome:'Suco de Abacaxi com Hortelã ',descriçao:'',valor:'RS6,00',imagem:''},
+                    { nome:'Suco de Abacaxi com Hortelã ',descriçao:'',valor:'RS6,00',imagem:'',obs:''},
                     
-                    { nome:'Suco de Maracujá',descriçao:'',valor:'R$ 6,00',imagem:''},
+                    { nome:'Suco de Maracujá',descriçao:'',valor:'R$ 6,00',imagem:'',obs:''},
                     
-                    { nome:'Cupuaçu',descriçao:'',valor:'R$ 6,00',imagem:''},
+                    { nome:'Cupuaçu',descriçao:'',valor:'R$ 6,00',imagem:'',obs:''},
 
-    { nome:'Suco de Manga',descriçao:'',valor:'R$ 6,00',imagem:''},
+    { nome:'Suco de Manga',descriçao:'',valor:'R$ 6,00',imagem:'',obs:''},
 
-    { nome:'Suco de Graviola',descriçao:'',valor:'R$ 6,00',imagem:''},
+    { nome:'Suco de Graviola',descriçao:'',valor:'R$ 6,00',imagem:'',obs:''},
 
-    { nome:'Suco de Caju',descriçao:'',valor:'R$ 6,00',imagem:''},
+    { nome:'Suco de Caju',descriçao:'',valor:'R$ 6,00',imagem:'',obs:''},
     
-    { nome:'Suco de Acerola',descriçao:'',valor:'R$ 6,00',imagem:''}
+    { nome:'Suco de Acerola',descriçao:'',valor:'R$ 6,00',imagem:'',obs:''}
 ]     
 let vita=[
     
