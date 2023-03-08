@@ -568,7 +568,7 @@ li:hover{
     justify-content: space-between;
     overflow-y: hidden;
 }
-.area-item-carrinho:active{
+.area-item-carrinho:hover{
     height: 100px;
     overflow-y:scroll ;
     
@@ -609,7 +609,7 @@ li:hover{
     border-radius: 5px;
     padding: 5px;
 }
-.descri-carrinho:active{
+.descri-carrinho:hover{
     background-color: "#2cc540";
     overflow: scroll;
 }
