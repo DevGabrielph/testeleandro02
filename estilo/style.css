@@ -558,9 +558,9 @@ li:hover{
     
 }
 .area-item-carrinho{
-    display: inline-flex;
+    display: inline-block;
     width: 330px;
-    height: 70px;
+    height: 60px;
     align-items: center;
     margin: 10px 0px 0px 15px;
     border-radius: 10px;
@@ -570,7 +570,6 @@ li:hover{
 }
 .area-item-carrinho:hover{
     height: 100px;
-    overflow-y:scroll ;
     
     
 }
@@ -583,10 +582,14 @@ li:hover{
 
 
 .area-item{
+    background-color: #2cc540;
     display: inline-flex;
     align-items: center;
-    width: 230px;
+    width: 320px;
     height: 50px;
+    align-items: center;
+    margin: 5px;
+    
     justify-content: space-around;
 }
 
@@ -602,24 +605,28 @@ li:hover{
 }
 .descri-carrinho{
     display: block;
-    width: 150px;
+    width: 320px;
     height: 30px;
     background-color: #dacdd1;
     overflow: hidden;
     border-radius: 5px;
-    padding: 5px;
+    margin: 0px 5px 5px 5px;
+    padding-bottom: 5px;
 }
 .descri-carrinho:hover{
     background-color: "#2cc540";
+    height: 60px;
     overflow: scroll;
 }
 .area-btn{
+    display: grid;
     margin: 5px;
     padding: 3px;
     align-items: center;
 }
 .img-delete,.img-edit{
     margin: 2px;
+    background-color: #2cc540;
 }
 .img-delete:hover,.img-edit:hover{
     padding: 1px;
