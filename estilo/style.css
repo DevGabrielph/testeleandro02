@@ -582,7 +582,7 @@ li:hover{
 
 
 .area-item{
-    background-color: #2cc540;
+    background-color: transparent;
     display: inline-flex;
     align-items: center;
     width: 320px;
@@ -626,7 +626,6 @@ li:hover{
 }
 .img-delete,.img-edit{
     margin: 2px;
-    background-color: #2cc540;
 }
 .img-delete:hover,.img-edit:hover{
     padding: 1px;
