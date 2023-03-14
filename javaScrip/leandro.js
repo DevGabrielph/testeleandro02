@@ -357,7 +357,7 @@ function adicionarCarrinho(){
 
 
       let descriCarrinho= document.createElement('p')
-      descriCarrinho.innerHTML=item.descriçao
+      descriCarrinho.innerHTML=item.obs
       descriCarrinho.classList.add('descri-carrinho')
       
       
