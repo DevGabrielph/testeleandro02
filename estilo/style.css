@@ -568,8 +568,8 @@ li:hover{
     justify-content: space-between;
     overflow-y: hidden;
 }
-.area-item-carrinho:hover{
-    height: 100px;
+.area-item-carrinho:active{
+   height: 100px;
     
     
 }
@@ -594,9 +594,16 @@ li:hover{
 }
 
 .valor-unitario-carrinho,.nome-item-carrinho{
-    font-size: 1.3em;
+    font-size: 1em;
     font-weight: bold;
 
+}
+.nome-item-carrinho{
+    margin: auto;
+    width: 100px;
+}
+.valor-unitario-carrinho{
+    width: 70px;
 }
 
 .titulo-item-carrinho{
@@ -606,16 +613,16 @@ li:hover{
 .descri-carrinho{
     display: block;
     width: 320px;
-    height: 30px;
+    max-height: 30px;
     background-color: #dacdd1;
     overflow: hidden;
     border-radius: 5px;
     margin: 0px 5px 5px 5px;
-    padding-bottom: 5px;
+    
 }
 .descri-carrinho:hover{
     background-color: "#2cc540";
-    height: 60px;
+    max-height: 60px;
     overflow: scroll;
 }
 .area-btn{

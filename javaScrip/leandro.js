@@ -272,7 +272,7 @@ function clickitem(posiçaoItem){
     var valorTotalItem=document.querySelector('.valor-total-item')
     let qtd=document.querySelector('.qtd')
     
-
+    console.log(itemExpand)
 
 }
 
@@ -290,19 +290,100 @@ function limparTextoArea(){
 
     
 }
+
+
+
+let carrinho = []
+
 function adicionarCarrinho(){
+ 
   let caixaObservacao= document.querySelector('#caixa-observaçao')
   itemExpand[0].obs = caixaObservacao.value
 
   folhas.folha3.style.display='none'
   folhas.folha4.style.display='block'
 
+  carrinho.push(...itemExpand)
+
+  itemExpand = []
+
+  let areaCarrinho= document.querySelector("#area-carrinho")
+
+  areaCarrinho.innerHTML=""
+
+  carrinho.map((item)=>{
+
+    
+
+      
+      let areaItemCarrinho=document.createElement('div')
+      areaItemCarrinho.classList.add('area-item-carrinho')
+      
+      let areaItem = document.createElement('div')
+      areaItem.classList.add('area-item')
+      
+      let imgItem = document.createElement('img')
+      imgItem.src=item.imagem
+      imgItem.classList.add('img-item-carrinho')
+
+      let nomeItem= document.createElement('p')
+      nomeItem.innerHTML=item.nome
+      nomeItem.classList.add('nome-item-carrinho')
+
+      let valorUniCarrinho= document.createElement("p")
+      valorUniCarrinho.classList.add('valor-unitario-carrinho')
+      let vlor=item.valor
+      let vl=String(vlor.toFixed(2))
+      valorUniCarrinho.innerHTML=(`R$ ${vl.replace('.',',')}`)
+
+      
+      let posicaoItem= carrinho.indexOf(item)
+      console.log(posicaoItem)
+      
+      
+      let imgEdit= document.createElement('img')
+      imgEdit.src="imagens/edit.png"
+      imgEdit.classList.add('img-edit')
+      imgEdit.setAttribute('onclick',`clickEdit(${posicaoItem})`)
+      
+      let imgDelet= document.createElement('img')
+      imgDelet.src="imagens/delete.png"
+      imgDelet.classList.add('img-delete')
+      imgDelet.setAttribute('onclick',`clickDelet(${posicaoItem})`)
 
 
 
-  
-    console.log(itemExpand[0])
+
+
+
+      let descriCarrinho= document.createElement('p')
+      descriCarrinho.innerHTML=item.descriçao
+      descriCarrinho.classList.add('descri-carrinho')
+      
+      
+      
+      areaCarrinho.appendChild(areaItemCarrinho)
+      areaItemCarrinho.appendChild(areaItem)
+      areaItem.appendChild(imgItem)
+      areaItem.appendChild(nomeItem)
+      areaItem.appendChild(valorUniCarrinho)
+      areaItem.appendChild(imgEdit)
+      areaItem.appendChild(imgDelet)
+      areaItemCarrinho.appendChild(descriCarrinho)
+      
+    })
+
+ console.log(itemExpand)
+ console.log(carrinho)
         
+    }
+
+    function clickEdit (posicaoItem){
+        
+        alert(posicaoItem)
+    }
+    function clickDelet(){
+        alert('oi')
     }
 
 
@@ -338,7 +419,8 @@ function finalizarPedido(){
     alert('aqui foi')
 }
 function continuarComprando(){
-    alert('aqui foi')
+    folhas.folha4.style.display='none'
+    folhas.folha2.style.display='block'
 }
 let voltarcarrinho=document.querySelector('#voltar-carrinho')
 voltarcarrinho.addEventListener('click', voltarCarrinho)
