@@ -19,7 +19,7 @@
            
            <div id="carrinho-ext">
                <div id="numero-de-itens">0</div>
-               <ion-icon name="cart-outline"></ion-icon>
+               <ion-icon name="cart-outline" id="C-ext"></ion-icon>
             </div>
             
             
@@ -33,33 +33,7 @@
                     <h1 id="titulo-carrinho">Carrinho</h1>
                </div>
 
-               <div id="area-carrinho">
-<!--
-
-    
-    <div class="area-item-carrinho">
-        
-        <div class="area-item"> 
-            
-            <img src="imagens/x-tudo.png" alt="lanche" class="img-item-carrinho">
-            <p class="nome-item-carrinho">x-tudo</p>
-            <p class="valor-unitario-carrinho">R$ 19,00</p>
-            <img src="imagens/edit.png" alt="edit" class="img-edit" >
-            <img src="imagens/delete.png " alt="delete" class="img-delete">
-            
-        </div>
-        
-        
-        
-        <p class="descri-carrinho" > DESCRIÇÃO :Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis magni eligendi pariatur nemo dolores. </p>
-        
-    </div>
-    
-            -->
-                
-
-
-               </div>
+               <div id="area-carrinho"> <!--AREA DO CARRINHO--> </div>
 
                <div id="area-pagamento">
                 <div id="area-input">
@@ -68,7 +42,7 @@
                 </div>
                 <div id="area-preço-final">
                     <p id="text-valor-final" >Valor Total :</p>
-                    <p  id="text-valor-final">R$ 19,00</p>
+                    <p  id="valor-final">R$ 19,00</p>
                 </div>
                </div>
                <button type="submit" id='botao-continuar' onclick="continuarComprando()">Continuar Comprando</button>
@@ -183,7 +157,8 @@
 
 
     </main>
-    <footer>
+    <footer id="LISTAQUESERAENVIADA">
+        
 
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

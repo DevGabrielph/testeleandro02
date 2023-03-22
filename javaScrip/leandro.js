@@ -272,7 +272,7 @@ function clickitem(posiçaoItem){
     var valorTotalItem=document.querySelector('.valor-total-item')
     let qtd=document.querySelector('.qtd')
     
-    console.log(itemExpand)
+   // console.log(itemExpand)
 
 }
 
@@ -294,6 +294,7 @@ function limparTextoArea(){
 
 
 let carrinho = []
+let TP= []//TP=todos os preços
 
 function adicionarCarrinho(){
  
@@ -304,86 +305,131 @@ function adicionarCarrinho(){
   folhas.folha4.style.display='block'
 
   carrinho.push(...itemExpand)
+  
+  itemExpand=[]
+  
+  renderCarrinho()
+  caixaObservacao.value=''
+  
+  //puxar informaçoes do pagamento do itemExpand
+  let posicao = carrinho.length -1
+  let VI=carrinho[posicao].valor
+  TP.push(VI)
+  
+  let VTC=  TP.reduce(function(soma,i){
+    return soma + i
+  })//VTC=valor total do carrinho
+  let VTS=String(VTC.toFixed(2))//VTS= Valor total transformado para String
+  let vt= document.querySelector('#valor-final')
+  vt.innerHTML=(`R$ ${VTS.replace(".",",")}`)
 
-  itemExpand = []
+  let quantidadeCarrinho= carrinho.length
+  let numeroCarrinho= document.querySelector('#numero-de-itens')  
+  numeroCarrinho.innerHTML=quantidadeCarrinho
+  
+  
 
-  let areaCarrinho= document.querySelector("#area-carrinho")
 
-  areaCarrinho.innerHTML=""
 
-  carrinho.map((item)=>{
 
+
+
+
+
+}
+    function renderCarrinho(){
+
+
+        let areaCarrinho= document.querySelector("#area-carrinho")
+
+        areaCarrinho.innerHTML=""
+
+      
+        carrinho.map((item)=>{
+      
+          
+      
+            
+            let areaItemCarrinho=document.createElement('div')
+            areaItemCarrinho.classList.add('area-item-carrinho')
+            
+            let areaItem = document.createElement('div')
+            areaItem.classList.add('area-item')
+            
+            let imgItem = document.createElement('img')
+            imgItem.src=item.imagem
+            imgItem.classList.add('img-item-carrinho')
+      
+            let nomeItem= document.createElement('p')
+            nomeItem.innerHTML=item.nome
+            nomeItem.classList.add('nome-item-carrinho')
+      
+            let valorUniCarrinho= document.createElement("p")
+            valorUniCarrinho.classList.add('valor-unitario-carrinho')
+            let vlor=item.valor
+            let vl=String(vlor.toFixed(2))
+            valorUniCarrinho.innerHTML=(`R$ ${vl.replace('.',',')}`)
+      
+            
+            let posicaoItemC= carrinho.indexOf(item)
+            
+            
+            
+            let imgEdit= document.createElement('img')
+            imgEdit.src="imagens/edit.png"
+            imgEdit.classList.add('img-edit')
+            imgEdit.setAttribute('onclick',`clickEdit(${posicaoItemC})`)
+            
+            let imgDelet= document.createElement('img')
+            imgDelet.src="imagens/delete.png"
+            imgDelet.classList.add('img-delete')
+            imgDelet.setAttribute('onclick',`clickDelet(${posicaoItemC})`)
+      
+      
+      
+      
+      
+      
+            let descriCarrinho= document.createElement('p')
+            descriCarrinho.innerHTML=item.obs
+            descriCarrinho.classList.add('descri-carrinho')
+            
+            
+            
+            areaCarrinho.appendChild(areaItemCarrinho)
+            areaItemCarrinho.appendChild(areaItem)
+            areaItem.appendChild(imgItem)
+            areaItem.appendChild(nomeItem)
+            areaItem.appendChild(valorUniCarrinho)
+            areaItem.appendChild(imgEdit)
+            areaItem.appendChild(imgDelet)
+            areaItemCarrinho.appendChild(descriCarrinho)
+
+
+            
     
-
-      
-      let areaItemCarrinho=document.createElement('div')
-      areaItemCarrinho.classList.add('area-item-carrinho')
-      
-      let areaItem = document.createElement('div')
-      areaItem.classList.add('area-item')
-      
-      let imgItem = document.createElement('img')
-      imgItem.src=item.imagem
-      imgItem.classList.add('img-item-carrinho')
-
-      let nomeItem= document.createElement('p')
-      nomeItem.innerHTML=item.nome
-      nomeItem.classList.add('nome-item-carrinho')
-
-      let valorUniCarrinho= document.createElement("p")
-      valorUniCarrinho.classList.add('valor-unitario-carrinho')
-      let vlor=item.valor
-      let vl=String(vlor.toFixed(2))
-      valorUniCarrinho.innerHTML=(`R$ ${vl.replace('.',',')}`)
-
-      
-      let posicaoItem= carrinho.indexOf(item)
-      console.log(posicaoItem)
-      
-      
-      let imgEdit= document.createElement('img')
-      imgEdit.src="imagens/edit.png"
-      imgEdit.classList.add('img-edit')
-      imgEdit.setAttribute('onclick',`clickEdit(${posicaoItem})`)
-      
-      let imgDelet= document.createElement('img')
-      imgDelet.src="imagens/delete.png"
-      imgDelet.classList.add('img-delete')
-      imgDelet.setAttribute('onclick',`clickDelet(${posicaoItem})`)
+              
+              
+            
+        })
 
 
 
 
 
-
-      let descriCarrinho= document.createElement('p')
-      descriCarrinho.innerHTML=item.obs
-      descriCarrinho.classList.add('descri-carrinho')
-      
-      
-      
-      areaCarrinho.appendChild(areaItemCarrinho)
-      areaItemCarrinho.appendChild(areaItem)
-      areaItem.appendChild(imgItem)
-      areaItem.appendChild(nomeItem)
-      areaItem.appendChild(valorUniCarrinho)
-      areaItem.appendChild(imgEdit)
-      areaItem.appendChild(imgDelet)
-      areaItemCarrinho.appendChild(descriCarrinho)
-      
-    })
-
- console.log(itemExpand)
- console.log(carrinho)
+        
+        
+    
         
     }
+    //console.log(carrinho)
 
-    function clickEdit (posicaoItem){
+    function clickEdit (posicaoItemC){
         
-        alert(posicaoItem)
+        alert(posicaoItemC)
     }
-    function clickDelet(){
-        alert('oi')
+    function clickDelet(posicaoItemC){
+        alert(posicaoItemC)
     }
 
 
