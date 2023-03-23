@@ -115,19 +115,19 @@ let cachorro =[
                 ]       
 let sucos =[
                     
-                    { nome:'Suco de Abacaxi com Hortelã ',descriçao:'',valor:'RS6,00',imagem:'',obs:''},
+                    { nome:'Suco de Abacaxi com Hortelã ',descriçao:'',valor:6.00,imagem:'',obs:''},
                     
-                    { nome:'Suco de Maracujá',descriçao:'',valor:'R$ 6,00',imagem:'',obs:''},
+                    { nome:'Suco de Maracujá',descriçao:'',valor:6.00,imagem:'',obs:''},
                     
-                    { nome:'Cupuaçu',descriçao:'',valor:'R$ 6,00',imagem:'',obs:''},
+                    { nome:'Cupuaçu',descriçao:'',valor: 6.00,imagem:'',obs:''},
 
-    { nome:'Suco de Manga',descriçao:'',valor:'R$ 6,00',imagem:'',obs:''},
+    { nome:'Suco de Manga',descriçao:'',valor:6.00,imagem:'',obs:''},
 
-    { nome:'Suco de Graviola',descriçao:'',valor:'R$ 6,00',imagem:'',obs:''},
+    { nome:'Suco de Graviola',descriçao:'',valor:6.00,imagem:'',obs:''},
 
-    { nome:'Suco de Caju',descriçao:'',valor:'R$ 6,00',imagem:'',obs:''},
+    { nome:'Suco de Caju',descriçao:'',valor: 6.00,imagem:'',obs:''},
     
-    { nome:'Suco de Acerola',descriçao:'',valor:'R$ 6,00',imagem:'',obs:''}
+    { nome:'Suco de Acerola',descriçao:'',valor: 6.00,imagem:'',obs:''}
 ]     
 let vita=[
     
@@ -251,10 +251,13 @@ function clickitem(posiçaoItem){
     folhas.folha2.style.display='none'
     itemExpand.push(itens[posiçaoItem])
 
-
+    renderItemExpand()
     
 
+}
+function renderItemExpand(){
 
+    
     let tituloExpand=document.querySelector('.nome-expand-itens')
     tituloExpand.innerHTML=itemExpand[0].nome//titulo-expand
 
@@ -268,11 +271,6 @@ function clickitem(posiçaoItem){
     let preçoU=itemExpand[0].valor
     let preçoUnitario=String(preçoU.toFixed(2))
     valorUnitario.innerHTML=(`R$ ${preçoUnitario.replace(".",",")}`)
-
-    var valorTotalItem=document.querySelector('.valor-total-item')
-    let qtd=document.querySelector('.qtd')
-    
-   // console.log(itemExpand)
 
 }
 
@@ -294,7 +292,7 @@ function limparTextoArea(){
 
 
 let carrinho = []
-let TP= []//TP=todos os preços
+
 
 function adicionarCarrinho(){
  
@@ -309,42 +307,31 @@ function adicionarCarrinho(){
   itemExpand=[]
   
   renderCarrinho()
+
   caixaObservacao.value=''
+
+          //puxar informaçoes do pagamento do itemExpand
+          let posicao = carrinho.length -1
+          let VI=0
+          VI=(carrinho[posicao].valor)
+          TP.push(VI)
+          VI=''
+
+ renderValorTotal()
   
-  //puxar informaçoes do pagamento do itemExpand
-  let posicao = carrinho.length -1
-  let VI=carrinho[posicao].valor
-  TP.push(VI)
+ 
   
-  let VTC=  TP.reduce(function(soma,i){
-    return soma + i
-  })//VTC=valor total do carrinho
-  let VTS=String(VTC.toFixed(2))//VTS= Valor total transformado para String
-  let vt= document.querySelector('#valor-final')
-  vt.innerHTML=(`R$ ${VTS.replace(".",",")}`)
-
-  let quantidadeCarrinho= carrinho.length
-  let numeroCarrinho= document.querySelector('#numero-de-itens')  
-  numeroCarrinho.innerHTML=quantidadeCarrinho
-  
-  
-
-
-
-
-
 
 
 
 }
+
+
     function renderCarrinho(){
 
 
         let areaCarrinho= document.querySelector("#area-carrinho")
-
-        areaCarrinho.innerHTML=""
-
-      
+        areaCarrinho.innerHTML=""     
         carrinho.map((item)=>{
       
           
@@ -359,17 +346,17 @@ function adicionarCarrinho(){
             let imgItem = document.createElement('img')
             imgItem.src=item.imagem
             imgItem.classList.add('img-item-carrinho')
-      
+            
             let nomeItem= document.createElement('p')
             nomeItem.innerHTML=item.nome
             nomeItem.classList.add('nome-item-carrinho')
-      
+            
             let valorUniCarrinho= document.createElement("p")
             valorUniCarrinho.classList.add('valor-unitario-carrinho')
             let vlor=item.valor
             let vl=String(vlor.toFixed(2))
             valorUniCarrinho.innerHTML=(`R$ ${vl.replace('.',',')}`)
-      
+            
             
             let posicaoItemC= carrinho.indexOf(item)
             
@@ -384,12 +371,12 @@ function adicionarCarrinho(){
             imgDelet.src="imagens/delete.png"
             imgDelet.classList.add('img-delete')
             imgDelet.setAttribute('onclick',`clickDelet(${posicaoItemC})`)
-      
-      
-      
-      
-      
-      
+            
+            
+            
+            
+            
+            
             let descriCarrinho= document.createElement('p')
             descriCarrinho.innerHTML=item.obs
             descriCarrinho.classList.add('descri-carrinho')
@@ -404,33 +391,94 @@ function adicionarCarrinho(){
             areaItem.appendChild(imgEdit)
             areaItem.appendChild(imgDelet)
             areaItemCarrinho.appendChild(descriCarrinho)
-
-
             
-    
-              
-              
+            
+            
+            
+            
+            
             
         })
-
-
-
-
-
-        
         
     
         
     }
     //console.log(carrinho)
+ 
+    
+    let TP= []//TP=todos os preços
+
+function renderValorTotal(){
+ 
+    
+    
+    
+  
+    
+    if ( TP == '' ) {
+    
+        let vt= document.querySelector('#valor-final')
+      vt.innerHTML=(`R$ 00,00`)
+    }else if ( TP !='' ){
+
+        let VTC=  TP.reduce(function(soma,i){
+            return soma + i
+        })//VTC=valor total do carrinho
+        let VTS=String(VTC.toFixed(2))//VTS= Valor total transformado para String
+        let vt= document.querySelector('#valor-final')
+        vt.innerHTML=(`R$ ${VTS.replace(".",",")}`)
+        
+        let quantidadeCarrinho= carrinho.length
+        let numeroCarrinho= document.querySelector('#numero-de-itens')  
+        numeroCarrinho.innerHTML=quantidadeCarrinho
+
+    }
+    
+  console.log(TP)
+
+  
+        
+    }
+
 
     function clickEdit (posicaoItemC){
         
         alert(posicaoItemC)
     }
+
     function clickDelet(posicaoItemC){
-        alert(posicaoItemC)
+
+        
+
+        carrinho.splice(posicaoItemC,1)
+        TP.splice(posicaoItemC,1)
+
+        let areaCarrinho= document.querySelector("#area-carrinho")
+
+        if(carrinho == ""){
+
+            renderCarrinho()
+            renderValorTotal()
+
+            
+            let CarrinhoVazio= document.createElement('p')
+            areaCarrinho.appendChild(CarrinhoVazio)
+            CarrinhoVazio.innerHTML='Carrinho Vazio'
+
+        }else if(carrinho != ""){
+            //let erro=document.createElement('p')
+            //areaCarrinho.appendChild(erro)
+            //erro.innerHTML='Deu erro'
+
+            renderCarrinho()
+            renderValorTotal()
+        }
+        
+        console.log(TP)
+       
+       
     }
+    
 
 
 function addItensCarrinho(){
@@ -462,15 +510,19 @@ function buttonMenosAdc(posiçaoAdc){
 }
 
 function finalizarPedido(){
-    alert('aqui foi')
+    renderValorTotal()
 }
 function continuarComprando(){
     folhas.folha4.style.display='none'
     folhas.folha2.style.display='block'
 }
+
 let voltarcarrinho=document.querySelector('#voltar-carrinho')
 voltarcarrinho.addEventListener('click', voltarCarrinho)
+
+
 function voltarCarrinho(){
+
     folhas.folha4.style.display='none'
     folhas.folha3.style.display='block'
 
