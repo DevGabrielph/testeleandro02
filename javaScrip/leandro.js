@@ -486,7 +486,7 @@ function renderValorTotal(){
             renderValorTotal()
         }
         
-        console.log(TP)
+       // console.log(TP)
        
        
     }
