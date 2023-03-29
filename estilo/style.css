@@ -639,3 +639,13 @@ li:hover{
 .img-delete:hover,.img-edit:hover{
     padding: 1px;
 }
+
+#area-carrinho>p{
+    font-size: 1.5em;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 25%;
+    animation: alternate-reverse;
+    
+}

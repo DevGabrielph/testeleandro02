@@ -453,22 +453,19 @@ function renderValorTotal(){
         carrinho.splice(posicaoItemC,1)
         TP.splice(posicaoItemC,1)
 
-        let areaCarrinho= document.querySelector("#area-carrinho")
+    
 
         if(carrinho == ""){
 
             renderCarrinho()
             renderValorTotal()
+            cVazio()
 
-            
-            let CarrinhoVazio= document.createElement('p')
-            areaCarrinho.appendChild(CarrinhoVazio)
-            CarrinhoVazio.innerHTML='Carrinho Vazio'
+             
+          
 
         }else if(carrinho != ""){
-            //let erro=document.createElement('p')
-            //areaCarrinho.appendChild(erro)
-            //erro.innerHTML='Deu erro'
+            
 
             renderCarrinho()
             renderValorTotal()
@@ -477,6 +474,13 @@ function renderValorTotal(){
         console.log(TP)
        
        
+    }
+    function cVazio(){
+        let areaCarrinho= document.querySelector("#area-carrinho")
+
+        let CarrinhoVazio= document.createElement('p')
+        areaCarrinho.appendChild(CarrinhoVazio)
+        CarrinhoVazio.innerHTML='Carrinho Vazio ...'
     }
     
 
@@ -538,22 +542,28 @@ if (folhas.folha4.style.display === 'none' ){
     folhas.folha3.style.display='none'
     folhas.folha4.style.display='none'
 }
+
+if(carrinho == ""){
+
+    renderCarrinho()
+    renderValorTotal()
+    cVazio()
+
+     
+  
+
+}else if(carrinho != ""){
     
+
+    renderCarrinho()
+    renderValorTotal()
+}
+
 }
 
 
-/*
-let voltarcarrinho=
-document.querySelector('#voltar-carrinho')
-voltarcarrinho.addEventListener('click', voltarCarrinho)
 
-function voltarCarrinho(){
 
-    folhas.folha4.style.display='none'
-    folhas.folha3.style.display='block'
-
-}
-*/
 
 
 function promoçoes(){
