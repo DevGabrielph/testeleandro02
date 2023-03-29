@@ -522,7 +522,23 @@ let carrinhoExterno = document.querySelector('#C-ext')
 carrinhoExterno.addEventListener('click', cExt)
 
 function cExt(){
-    alert('oi')
+
+
+
+if (folhas.folha4.style.display === 'none' ){
+
+    folhas.folha1.style.display='none'
+    folhas.folha2.style.display='none'
+    folhas.folha3.style.display='none'
+    folhas.folha4.style.display='block'
+
+}else if(folhas.folha4.style.display != 'none' ){
+    folhas.folha1.style.display='grid'
+    folhas.folha2.style.display='none'
+    folhas.folha3.style.display='none'
+    folhas.folha4.style.display='none'
+}
+    
 }
 
 
