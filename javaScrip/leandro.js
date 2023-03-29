@@ -257,20 +257,22 @@ function clickitem(posiçaoItem){
 }
 function renderItemExpand(){
 
-    
-    let tituloExpand=document.querySelector('.nome-expand-itens')
-    tituloExpand.innerHTML=itemExpand[0].nome//titulo-expand
+    //if ( itemExpand !=''){
 
-    let imagemExpand=document.querySelector("#imagem-expand")
-    imagemExpand.src=itemExpand[0].imagem
-
-    let descriçaoProdutoExpand=document.querySelector('.descriçao-produto-expand')
-    descriçaoProdutoExpand.innerHTML=itemExpand[0].descriçao
-
-    let valorUnitario=document.querySelector('.valor-unitario')
-    let preçoU=itemExpand[0].valor
-    let preçoUnitario=String(preçoU.toFixed(2))
-    valorUnitario.innerHTML=(`R$ ${preçoUnitario.replace(".",",")}`)
+        let tituloExpand=document.querySelector('.nome-expand-itens')
+        tituloExpand.innerHTML=itemExpand[0].nome//titulo-expand
+        
+        let imagemExpand=document.querySelector("#imagem-expand")
+        imagemExpand.src=itemExpand[0].imagem
+        
+        let descriçaoProdutoExpand=document.querySelector('.descriçao-produto-expand')
+        descriçaoProdutoExpand.innerHTML=itemExpand[0].descriçao
+        
+        let valorUnitario=document.querySelector('.valor-unitario')
+        let preçoU=itemExpand[0].valor
+        let preçoUnitario=String(preçoU.toFixed(2))
+        valorUnitario.innerHTML=(`R$ ${preçoUnitario.replace(".",",")}`)
+    //}else if ( itemExpand===''){}
 
 }
 
@@ -283,7 +285,7 @@ function renderItemExpand(){
 
 
 function limparTextoArea(){
-    let textArea=document.querySelector('#caixa-observaçao')
+    let textArea=document.querySelector('#caixa-observacao')
     textArea.value=''
 
     
@@ -296,7 +298,7 @@ let carrinho = []
 
 function adicionarCarrinho(){
  
-  let caixaObservacao= document.querySelector('#caixa-observaçao')
+  let caixaObservacao= document.querySelector('#caixa-observacao')
   itemExpand[0].obs = caixaObservacao.value
 
   folhas.folha3.style.display='none'
@@ -434,7 +436,7 @@ function renderValorTotal(){
 
     }
     
-  console.log(TP)
+  
 
   
         
@@ -442,8 +444,21 @@ function renderValorTotal(){
 
 
     function clickEdit (posicaoItemC){
+
+        folhas.folha4.style.display='none'
+        folhas.folha3.style.display='block'
+        itemExpand.push(carrinho[posicaoItemC])
+        clickDelet(posicaoItemC)
+        renderItemExpand()
+
+      //  let caixaObservacao= document.querySelector('#caixa-observacao')
+        //caixaObservacao.innerHTML=itemExpand[0].obs
+
         
-        alert(posicaoItemC)
+        
+
+        console.log (carrinho)
+        console.log (itemExpand)
     }
 
     function clickDelet(posicaoItemC){
