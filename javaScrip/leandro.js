@@ -517,9 +517,19 @@ function continuarComprando(){
     folhas.folha2.style.display='block'
 }
 
-let voltarcarrinho=document.querySelector('#voltar-carrinho')
-voltarcarrinho.addEventListener('click', voltarCarrinho)
+let carrinhoExterno = document.querySelector('#C-ext')
 
+carrinhoExterno.addEventListener('click', cExt)
+
+function cExt(){
+    alert('oi')
+}
+
+
+/*
+let voltarcarrinho=
+document.querySelector('#voltar-carrinho')
+voltarcarrinho.addEventListener('click', voltarCarrinho)
 
 function voltarCarrinho(){
 
@@ -527,6 +537,7 @@ function voltarCarrinho(){
     folhas.folha3.style.display='block'
 
 }
+*/
 
 
 function promoçoes(){

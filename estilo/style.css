@@ -36,10 +36,11 @@ header{
 }
 #carrinho-ext{
     display: inline-flex;
+    background-color: #35f54f;
 }
 
 #C-ext{
-    margin: 10px;
+    margin: 10px 10px 0px 10px;
     
     background-image: linear-gradient(to top ,#BF343F,#F2CE1B);
     color: white;
@@ -51,7 +52,10 @@ header{
     display: inline-flex;
 
 
-} 
+}
+#C-ext:active{
+    padding: 5px;
+}
   
 
 
@@ -59,8 +63,8 @@ header{
     color: white;
     background-color: #BF343F;
     position: absolute;
-    border-radius: 50%;
-    margin-top:35px;
+    border-radius: 30%;
+    margin-top:0px;
     padding: 3px;
 }
 
@@ -223,7 +227,9 @@ li:hover{
 #interior-carrinho{
     display: none;
     max-width: 370px;
+    height: 530px;
     margin: auto;
+    margin-top:20px ;
     align-items: center;
     background-color: #463d3d7a; 
     border-radius: 20px;  
@@ -300,7 +306,7 @@ li:hover{
     margin-left: 25px;
     width: 320px;
     text-align: center;
-    margin-top: 5px;
+    margin-top: 10px;
     font-size: 1.4em;
     border-radius: 20px;
     background-image:linear-gradient(to left,rgb(5, 145, 5),rgb(71, 196, 33),rgb(130, 214, 123));
@@ -327,7 +333,7 @@ li:hover{
     margin-left: 25px;
     width: 320px;
     text-align: center;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-bottom: 20px;
     font-size: 1.4em;
     border-radius: 20px;
