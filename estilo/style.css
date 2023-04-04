@@ -372,6 +372,7 @@ li:hover{
 }
 .folha-expand-itens{
     display: none;
+    max-height: 75vh;
 }
 .cabeçalho-expand-itens{
     height: 70px;
@@ -531,8 +532,9 @@ li:hover{
 }
 
 #caixa-observacao{
-    width: 320px;
-    margin: 10px;
+    width: 95%;
+    margin: 5px;
+    margin-bottom: 0px;
     padding: 3px;
     font-size: 1.4em;
     font-family: 'Times New Roman', Times, serif;
@@ -540,7 +542,7 @@ li:hover{
     border-radius: 10px;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
     border: 1px solid  rgb(172, 171, 171);
-    box-shadow: 2px 1px 9px white;
+    box-shadow: 1px 3px 3px rgb(90, 88, 88);
 }
 
 
@@ -648,4 +650,50 @@ li:hover{
     margin-top: 25%;
     animation: alternate-reverse;
     
+}
+
+/*-----------CAIXAS ADICIONAIS*/
+
+
+#caixa-adicionais{
+    width: 95%;
+    height: 97px;
+    background-color: #9ab89f;
+    margin: auto;
+    border: 1px solid rgb(99, 99, 99);
+    border-radius: 10px;
+    box-shadow: 1px 3px 3px rgb(90, 88, 88);
+    overflow-y: scroll;
+    padding: 5px;
+}
+#caixa-adicionais>div{
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid blueviolet;
+    
+    
+    margin: 10px;
+    display: flex;
+}
+.areaBtnQuant{
+    width: 100px;
+    height: 10px;
+    background-color: #2cc540;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.areaBtnQuant>button{
+    background-color: #d4cbcc;
+    width: 15px;
+    height: 20px;
+    border-radius: 60%;
+}
+#caixa-adicionais>div>p{
+    background-color: #975056;
+    width: 100px;
+    text-align: center;
+}
+.quantiADC{
+    font-size: 1.2em;
 }

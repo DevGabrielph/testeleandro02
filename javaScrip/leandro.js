@@ -29,7 +29,7 @@ let listaInicial={
 let tituloFolha2= document.querySelector('#titulo-cabeçalho-itens')
 let listaItemns=document.querySelector('#lista-itens')
 //---VARIAVEIS--DA--FOLHA--ADICIONAIS
-let adicionaisCaixa=document.querySelector('#itens-adicionais')
+//let adicionaisCaixa=document.querySelector('#itens-adicionais')
 
 
 //--------EVENTOS-LISTA-INICIAL---
@@ -252,6 +252,7 @@ function clickitem(posiçaoItem){
     itemExpand.push(itens[posiçaoItem])
 
     renderItemExpand()
+    renderAdicionais()
     
 
 }
@@ -515,7 +516,7 @@ function addItensCarrinho(){
 function buttonMaisAdc(posiçaoAdc){
     
     adicionais[posiçaoAdc].quantidade= adicionais[posiçaoAdc].quantidade + 1
-    adicionarCarrinho()
+    
     
     
    
@@ -525,7 +526,7 @@ function buttonMenosAdc(posiçaoAdc){
     if(adicionais[posiçaoAdc].quantidade=0){
         adicionais[posiçaoAdc].quantidade=adicionais[posiçaoAdc].quantidade-0
     }
-    adicionarCarrinho()
+   
 }
 
 function finalizarPedido(){
@@ -576,6 +577,65 @@ if(carrinho == ""){
 
 }
 
+let adicionais = [
+    {id:1,item:'carne',quantidade:0},
+    {id:2,item:'ovo',quantidade:0},
+    {id:3,item:'queijo',quantidade:0},
+    {id:4,item:'bacon',quantidade:0},
+    {id:5,item:'calabresa',quantidade:0},
+
+] 
+
+function renderAdicionais(){
+
+    let caixaAdicionais=document.querySelector('#caixa-adicionais')
+    
+    caixaAdicionais.innerHTML=""
+
+    adicionais.map((todo)=>{
+
+
+        let caixaItem=document.createElement('div')
+
+        let caixaText=document.createElement('p')
+        let itemText=document.createTextNode(todo.item)
+
+        let areaBtn= document.createElement('div')
+        areaBtn.classList.add('areaBtnQuant')
+
+        let butomMais= document.createElement('button')
+        let textBMais= document.createTextNode('+')
+
+        let quantiADC= document.createElement('p')
+        quantiADC.classList.add('quantiADC')
+        quantiADC.innerHTML=todo.quantidade
+    
+        
+        let butonMenos=document.createElement('button')
+        let textBMenos=document.createTextNode('-')
+
+
+
+        caixaAdicionais.appendChild(caixaItem)
+        caixaItem.appendChild(caixaText)
+        caixaText.appendChild(itemText)
+        caixaItem.appendChild(areaBtn)
+        
+        areaBtn.appendChild(butonMenos)
+        butomMais.appendChild(textBMais)
+        areaBtn.appendChild(quantiADC)
+        areaBtn.appendChild(butomMais)
+        butonMenos.appendChild(textBMenos)
+      
+
+    })
+    
+
+    
+
+   
+console.log(adicionais)
+}
 
 
 
