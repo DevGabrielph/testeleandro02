@@ -54,92 +54,92 @@ listaInicial.vita.addEventListener('click',vitaminas)
 
 ///-------------ITENS-EMPLIHADOS(arrays)
 let promo=[
-   { nome:'2 X-tudos',descriçao:' Pão, carne, queijo, presunto, bacon, ovo, alface, ketchup, maionese temperada, e batata palha.',valor:19.99,imagem:"imagens/x-tudo.png",obs:''},
+   { nome:'2 X-tudos',descriçao:' Pão, carne, queijo, presunto, bacon, ovo, alface, ketchup, maionese temperada, e batata palha.',valor:19.99,imagem:"imagens/x-tudo.png",obs:'',valorF:''},
     
-    { nome:'Combo X-burguer',descriçao:' lanche + batata frita + guaravita ou guaracamp.',valor:11.99,imagem:"imagens/x-tudo.png",obs:''},
+    { nome:'Combo X-burguer',descriçao:' lanche + batata frita + guaravita ou guaracamp.',valor:11.99,imagem:"imagens/x-tudo.png",obs:'',valorF:''},
 
-    { nome:'Combo Duplo cheddar',descriçao:'  lanche + batata frita + guaravita ou guaracamp.',valor:16.00,imagem:"imagens/x-tudo.png",obs:''},
+    { nome:'Combo Duplo cheddar',descriçao:'  lanche + batata frita + guaravita ou guaracamp.',valor:16.00,imagem:"imagens/x-tudo.png",obs:'',valorF:''},
 
-    { nome:'Combo X-Tudo ',descriçao:' lanche + batata frita + guaravita ou guaracamp.',valor:16.00,imagem:"imagens/x-tudo.png",obs:''},
+    { nome:'Combo X-Tudo ',descriçao:' lanche + batata frita + guaravita ou guaracamp.',valor:16.00,imagem:"imagens/x-tudo.png",obs:'',valorF:''},
 
-    { nome:'Combo X-Picanha',descriçao:'  lanche + batata frita + refrigerante lata.',valor:25.00 ,imagem:"imagens/x-tudo.png",obs:''}
+    { nome:'Combo X-Picanha',descriçao:'  lanche + batata frita + refrigerante lata.',valor:25.00 ,imagem:"imagens/x-tudo.png",obs:'',valorF:''}
 ]
 let por=[
-        { nome:' Batata Frita 200g',descriçao:'Batata frita , ketchup, maionese temperada,queijo ralado e orégano.',valor:7.00,imagem:'',obs:''},
+        { nome:' Batata Frita 200g',descriçao:'Batata frita , ketchup, maionese temperada,queijo ralado e orégano.',valor:7.00,imagem:'',obs:'',valorF:''},
         
-        { nome:'Batata Frita 400g',descriçao:'Batata frita , calabresa, ketchup, maionese temperada,queijo ralado e orégano.',valor:14.00,imagem:'',obs:''}
+        { nome:'Batata Frita 400g',descriçao:'Batata frita , calabresa, ketchup, maionese temperada,queijo ralado e orégano.',valor:14.00,imagem:'',obs:'',valorF:''}
     ]
  let Hamb=[
-        { nome:'Hambúrguer',descriçao:' Pão, carne, alface, ketchup ,maionese temperada , e batata palha.',valor:5.00,imagem:'imagens/x-tudo.png',obs:''},
+        { nome:'Hambúrguer',descriçao:' Pão, carne, alface, ketchup ,maionese temperada , e batata palha.',valor:5.00,imagem:'imagens/x-tudo.png',obs:'',valorF:''},
         
-        { nome:'X-Búrguer',descriçao:'  Pão, carne, queijo, alface, ketchup ,maionese temperada , e batata palha.',valor:6.00,imagem:'imagens/x-tudo.png',obs:''},
+        { nome:'X-Búrguer',descriçao:'  Pão, carne, queijo, alface, ketchup ,maionese temperada , e batata palha.',valor:6.00,imagem:'imagens/x-tudo.png',obs:'',valorF:''},
         
-            { nome:'Duplo X-Búrguer ',descriçao:' Pão, 2 carnes, 2 queijos, alface, ketchup ,maionese temperada , e batata palha.',valor:10.00,imagem:'imagens/x-tudo.png',obs:''},
+            { nome:'Duplo X-Búrguer ',descriçao:' Pão, 2 carnes, 2 queijos, alface, ketchup ,maionese temperada , e batata palha.',valor:10.00,imagem:'imagens/x-tudo.png',obs:'',valorF:''},
     
-            { nome:'Duplo Cheddar',descriçao:'Pão, 2 carnes, 2 cheddar, alface, ketchup ,maionese temperada , e batata palha.',valor:10.00,imagem:'imagens/x-tudo.png',obs:''},
+            { nome:'Duplo Cheddar',descriçao:'Pão, 2 carnes, 2 cheddar, alface, ketchup ,maionese temperada , e batata palha.',valor:10.00,imagem:'imagens/x-tudo.png',obs:'',valorF:''},
             
-            { nome:'X-Egg ',descriçao:' Pão, carne, queijo , alface, ketchup ,maionese temperada , e batata palha.',valor:9.00,imagem:'imagens/x-tudo.png',obs:''},
+            { nome:'X-Egg ',descriçao:' Pão, carne, queijo , alface, ketchup ,maionese temperada , e batata palha.',valor:9.00,imagem:'imagens/x-tudo.png',obs:'',valorF:''},
     
-            { nome:'X-Tudo',descriçao:' Pão, carne, queijo, presunto, bacon, ovo, alface, ketchup ,maionese temperada , e batata palha.',valor:9.00,imagem:'imagens/x-tudo.png',obs:''},
+            { nome:'X-Tudo',descriçao:' Pão, carne, queijo, presunto, bacon, ovo, alface, ketchup ,maionese temperada , e batata palha.',valor:9.00,imagem:'imagens/x-tudo.png',obs:'',valorF:''},
     
-            { nome:'X-Trovão',descriçao:'   Pão, 2 carnes, queijo, presunto, bacon, ovo, alface, ketchup ,maionese temperada , e batata palha.',valor:14.00,imagem:'imagens/x-tudo.png',obs:''},
+            { nome:'X-Trovão',descriçao:'   Pão, 2 carnes, queijo, presunto, bacon, ovo, alface, ketchup ,maionese temperada , e batata palha.',valor:14.00,imagem:'imagens/x-tudo.png',obs:'',valorF:''},
     
-            { nome:'X-Tudão',descriçao:'  Pão, 2 carnes, 2 queijos, 2 presuntos, bacon, 2 ovos, alface, ketchup ,maionese temperada , e batata palha.',valor:16.00,imagem:'imagens/x-tudo.png',obs:''},
+            { nome:'X-Tudão',descriçao:'  Pão, 2 carnes, 2 queijos, 2 presuntos, bacon, 2 ovos, alface, ketchup ,maionese temperada , e batata palha.',valor:16.00,imagem:'imagens/x-tudo.png',obs:'',valorF:''},
             
-            { nome:'X-Calabresa',descriçao:'Pão, carne, queijo, presunto, calabresa, ovo, alface, ketchup ,maionese temperada , e batata palha.',valor:13.00,imagem:'imagens/x-tudo.png',obs:''},
+            { nome:'X-Calabresa',descriçao:'Pão, carne, queijo, presunto, calabresa, ovo, alface, ketchup ,maionese temperada , e batata palha.',valor:13.00,imagem:'imagens/x-tudo.png',obs:'',valorF:''},
             
-            { nome:'X-Picanha',descriçao:' Pão, carne de picanha 120g, queijo, presunto, bacon, ovo, alface, ketchup ,maionese temperada , e batata palha.',valor:16.00,imagem:'imagens/x-tudo.png',obs:''}
+            { nome:'X-Picanha',descriçao:' Pão, carne de picanha 120g, queijo, presunto, bacon, ovo, alface, ketchup ,maionese temperada , e batata palha.',valor:16.00,imagem:'imagens/x-tudo.png',obs:'',valorF:''}
 ] 
 let cachorro =[
-                { nome:'Linguiça',descriçao:' Pão, salcicha, molho, ketchup, maionese, ovo de codorna, azeite, azeitona, queijo relado, alho torrado,cheddar,catupiry e batta palha .',valor:12.00,imagem:'',obs:''},
+                { nome:'Linguiça',descriçao:' Pão, salcicha, molho, ketchup, maionese, ovo de codorna, azeite, azeitona, queijo relado, alho torrado,cheddar,catupiry e batta palha .',valor:12.00,imagem:'',obs:'',valorF:''},
                 
-                { nome:'Salcicha',descriçao:' Pão, salcicha, molho, ketchup, maionese, ovo de codorna, azeite, azeitona, queijo relado, alho torrado,cheddar,catupiry e batta palha',valor:10.00,imagem:'',obs:''}
+                { nome:'Salcicha',descriçao:' Pão, salcicha, molho, ketchup, maionese, ovo de codorna, azeite, azeitona, queijo relado, alho torrado,cheddar,catupiry e batta palha',valor:10.00,imagem:'',obs:'',valorF:''}
 ]
  let bebi=[
                     {nome:'Água (com gás)',valor:2.99,
-                    descriçao:'',imagem:"imagens/agua-com-gas.png",obs:''},
+                    descriçao:'',imagem:"imagens/agua-com-gas.png",obs:'',valorF:''},
                     
-                    { nome:' Água (sem gás)',descriçao:'',valor:1.99,imagem:"imagens/agua-sem-gas.png",obs:''},
+                    { nome:' Água (sem gás)',descriçao:'',valor:1.99,imagem:"imagens/agua-sem-gas.png",obs:'',valorF:''},
                     
-                    { nome:'Guaravita',descriçao:'',valor:1.99,imagem:'imagens/guaravita.png',obs:''}, 
+                    { nome:'Guaravita',descriçao:'',valor:1.99,imagem:'imagens/guaravita.png',obs:'',valorF:''}, 
                     
-                    { nome:'Coca-cola 310ml ',descriçao:'',valor:5.00,imagem:'imagens/coca-cola.png',obs:''},
+                    { nome:'Coca-cola 310ml ',descriçao:'',valor:5.00,imagem:'imagens/coca-cola.png',obs:'',valorF:''},
         
-                    { nome:'Fanta Larranja 350ml',descriçao:'',valor:5.00,imagem:'imagens/fanta-laranja.png',obs:''},
+                    { nome:'Fanta Larranja 350ml',descriçao:'',valor:5.00,imagem:'imagens/fanta-laranja.png',obs:'',valorF:''},
         
-                    { nome:'Fanta Uva 350ml',descriçao:'',valor:5.00,imagem:'imagens/fanta-uva.png',obs:''},
+                    { nome:'Fanta Uva 350ml',descriçao:'',valor:5.00,imagem:'imagens/fanta-uva.png',obs:'',valorF:''},
                     
-                    { nome:'Guanará Antártica',descriçao:'',valor:5.00,imagem:'imagens/guarana-antartica.png',obs:''},
+                    { nome:'Guanará Antártica',descriçao:'',valor:5.00,imagem:'imagens/guarana-antartica.png',obs:'',valorF:''},
         
-                    { nome:'Pepsi',descriçao:'',valor:5.00,imagem:'imagens/pepsi.png',obs:''},    
+                    { nome:'Pepsi',descriçao:'',valor:5.00,imagem:'imagens/pepsi.png',obs:'',valorF:'',valorF:''},    
                 ]       
 let sucos =[
                     
-                    { nome:'Suco de Abacaxi com Hortelã ',descriçao:'',valor:6.00,imagem:'',obs:''},
+                    { nome:'Suco de Abacaxi com Hortelã ',descriçao:'',valor:6.00,imagem:'',obs:'',valorF:''},
                     
-                    { nome:'Suco de Maracujá',descriçao:'',valor:6.00,imagem:'',obs:''},
+                    { nome:'Suco de Maracujá',descriçao:'',valor:6.00,imagem:'',obs:'',valorF:''},
                     
-                    { nome:'Cupuaçu',descriçao:'',valor: 6.00,imagem:'',obs:''},
+                    { nome:'Cupuaçu',descriçao:'',valor: 6.00,imagem:'',obs:'',valorF:''},
 
-    { nome:'Suco de Manga',descriçao:'',valor:6.00,imagem:'',obs:''},
+    { nome:'Suco de Manga',descriçao:'',valor:6.00,imagem:'',obs:'',valorF:''},
 
-    { nome:'Suco de Graviola',descriçao:'',valor:6.00,imagem:'',obs:''},
+    { nome:'Suco de Graviola',descriçao:'',valor:6.00,imagem:'',obs:'',valorF:''},
 
-    { nome:'Suco de Caju',descriçao:'',valor: 6.00,imagem:'',obs:''},
+    { nome:'Suco de Caju',descriçao:'',valor: 6.00,imagem:'',obs:'',valorF:''},
     
-    { nome:'Suco de Acerola',descriçao:'',valor: 6.00,imagem:'',obs:''}
+    { nome:'Suco de Acerola',descriçao:'',valor: 6.00,imagem:'',obs:'',valorF:''}
 ]     
 let vita=[
     
-    { nome:'Abacaxi com Hortelã ao Leite',descriçao:'', valor:7.00,imagem:''},
+    { nome:'Abacaxi com Hortelã ao Leite',descriçao:'', valor:7.00,imagem:'',valorF:''},
     
-    { nome:'Maracujá ao Leite',descriçao:'',valor:7.00,imagem:''},
+    { nome:'Maracujá ao Leite',descriçao:'',valor:7.00,imagem:'',valorF:''},
 
-    { nome:'Cupuaçu ao Leite',descriçao:'',valor:7.00,imagem:''},
+    { nome:'Cupuaçu ao Leite',descriçao:'',valor:7.00,imagem:'',valorF:''},
 
-    { nome:'Manga ao Leite',descriçao:'',valor:7.00,imagem:''},
+    { nome:'Manga ao Leite',descriçao:'',valor:7.00,imagem:'',valorF:''},
     
-    { nome:'Morango ao Leite',descriçao:'',valor:7.00,imagem:''}
+    { nome:'Morango ao Leite',descriçao:'',valor:7.00,imagem:'',valorF:''}
 ] 
 
 //arrays com os titulos
@@ -253,6 +253,8 @@ function clickitem(posiçaoItem){
 
     renderItemExpand()
     renderAdicionais()
+
+    console.log(itemExpand)
     
 
 }
@@ -278,9 +280,6 @@ function renderItemExpand(){
 }
 
 
-
-
-/*{nome:"",descriçao:"",imagem:"",valor:0,observaçao:"",quantidade}*/
 
 
 
@@ -435,11 +434,9 @@ function renderValorTotal(){
         let numeroCarrinho= document.querySelector('#numero-de-itens')  
         numeroCarrinho.innerHTML=quantidadeCarrinho
 
+        console.log(TP)
     }
-    
-  
 
-  
         
     }
 
@@ -505,28 +502,8 @@ function addItensCarrinho(){
 
 
     carrinho.push(itemExpand)
-    //carrinho.push(resultadoPT)
-/*
-   console.log(itemExpand)
-   console.log(carrinho)
-   console.log(resultadoPT)*/
 
 
-}
-function buttonMaisAdc(posiçaoAdc){
-    
-    adicionais[posiçaoAdc].quantidade= adicionais[posiçaoAdc].quantidade + 1
-    
-    
-    
-   
-}
-function buttonMenosAdc(posiçaoAdc){
-    adicionais[posiçaoAdc].quantidade = adicionais[posiçaoAdc].quantidade - 1
-    if(adicionais[posiçaoAdc].quantidade=0){
-        adicionais[posiçaoAdc].quantidade=adicionais[posiçaoAdc].quantidade-0
-    }
-   
 }
 
 function finalizarPedido(){
@@ -578,11 +555,11 @@ if(carrinho == ""){
 }
 
 let adicionais = [
-    {id:1,item:'carne',quantidade:0},
-    {id:2,item:'ovo',quantidade:0},
-    {id:3,item:'queijo',quantidade:0},
-    {id:4,item:'bacon',quantidade:0},
-    {id:5,item:'calabresa',quantidade:0},
+    {id:1,item:'carne',quantidade:0,valorU:3,valorFA:''},
+    {id:2,item:'ovo',quantidade:0,valorU:2.30,valorFA:''},
+    {id:3,item:'queijo',quantidade:0,valorU:1.99,valorFA:''},
+    {id:4,item:'bacon',quantidade:0,valorU:1,valorFA:''},
+    {id:5,item:'calabresa',quantidade:0,valorU:1.50,valorFA:''},
 
 ] 
 
@@ -599,6 +576,11 @@ function renderAdicionais(){
 
         let caixaText=document.createElement('p')
         let itemText=document.createTextNode(todo.item)
+
+        let valorADC=document.createElement('p')
+        let textValor= String(todo.valorU.toFixed(2))
+        let text=document.createTextNode(`R$ ${textValor.replace(".",",")} Uni.`)
+
 
         let areaBtn= document.createElement('div')
         areaBtn.classList.add('areaBtnQuant')
@@ -619,14 +601,22 @@ function renderAdicionais(){
         caixaAdicionais.appendChild(caixaItem)
         caixaItem.appendChild(caixaText)
         caixaText.appendChild(itemText)
+        caixaItem.appendChild(valorADC)
+        valorADC.appendChild(text)
         caixaItem.appendChild(areaBtn)
+
         
         areaBtn.appendChild(butonMenos)
         butomMais.appendChild(textBMais)
         areaBtn.appendChild(quantiADC)
         areaBtn.appendChild(butomMais)
         butonMenos.appendChild(textBMenos)
-      
+
+        let posicaoADc= adicionais.indexOf(todo)
+
+        butomMais.setAttribute("onclick",`buttomMaisADC(${posicaoADc})`)
+
+        butonMenos.setAttribute("onclick",`buttoMenosADC(${posicaoADc})`)
 
     })
     
@@ -634,7 +624,68 @@ function renderAdicionais(){
     
 
    
-console.log(adicionais)
+//console.log(adicionais)
+}
+let TA = []
+
+function buttomMaisADC(posicaoADc){
+ 
+    adicionais[posicaoADc].quantidade = adicionais[posicaoADc].quantidade + 1
+    
+    renderAdicionais()
+   
+    adicionais[posicaoADc].valorFA = adicionais[posicaoADc].quantidade * adicionais[posicaoADc].valorU
+
+TA.push(adicionais[posicaoADc].valorFA)
+
+
+
+/*
+
+    
+    let caixaPF= document.querySelector('.valorTotal')
+    caixaPF.innerHTML=''
+  
+   // if(adicionais[posicaoADc].quantidade > 0){
+
+        let text=document.createElement('p')
+        text.innerHTML="valor total:"
+        caixaPF.appendChild(text)
+        let valor=document.createElement('p')
+        valor.innerHTML="R$ 20,00"
+        caixaPF.appendChild(valor)*/
+        
+
+
+
+    
+
+    //alert('text')
+    //console.log(adicionais[posicaoADc].quantidade)
+    //console.log(adicionais[posicaoADc].valorU)
+    console.log(TA)
+}
+
+
+function buttoMenosADC(posicaoADc){
+
+    let caixaPF= document.querySelector('.valorTotal')
+    caixaPF.innerHTML=''
+
+    if(adicionais[posicaoADc].quantidade == 0 ){
+
+        adicionais[posicaoADc].quantidade = 0
+        renderAdicionais()
+        alert('1')
+
+    }else{
+        adicionais[posicaoADc].quantidade = adicionais[posicaoADc].quantidade - 1
+        renderAdicionais()
+       alert('2')
+
+    }
+
+
 }
 
 
